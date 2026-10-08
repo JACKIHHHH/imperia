@@ -1,0 +1,29 @@
+# Recursos originales descargados (cientos de MB; se regeneran con tools/)
+assets_src/
+# Compilaciones, copias de versiones y datos de pruebas
+build/
+build_log.txt
+partidas_de_prueba/
+v1/
+v2/
+v3/
+v4/
+v5/
+v6/
+v6.1/
+v6.2/
+windows/cache/
+windows/dist/
+windows/app/
+windows/ico/
+windows/macprueba/
+windows/node_modules/
+pruebas/datos_app_pruebas/
+pruebas/__pycache__/
+pruebas/shot_*
+pruebas/*.log
+pruebas/ping.txt
+node_modules/
+.DS_Store
+*.dmg
+*.zip

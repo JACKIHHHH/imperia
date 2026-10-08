@@ -1,0 +1,5462 @@
+{
+ "out": "../web/chars_data.js",
+ "fps": 15,
+ "models": [
+  {
+   "key": "villager_0",
+   "file": "../assets_src/modularmen/Farmer.gltf",
+   "team": [
+    "LightBlue"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "axe",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.15,
+      0
+     ],
+     "scale": 1,
+     "part": 1
+    },
+    {
+     "kind": "pick",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.15,
+      0
+     ],
+     "scale": 1,
+     "part": 2
+    },
+    {
+     "kind": "hoe",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.25,
+      0
+     ],
+     "scale": 1,
+     "part": 3
+    },
+    {
+     "kind": "hammer",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.1,
+      0
+     ],
+     "scale": 1,
+     "part": 4
+    },
+    {
+     "kind": "basket",
+     "bone": "Wrist.L",
+     "part": 5
+    },
+    {
+     "kind": "bundle",
+     "bone": "Chest",
+     "at": [
+      0,
+      -0.7,
+      1.1
+     ],
+     "fitSeg": "Head",
+     "scale": 0.8,
+     "part": 15
+    }
+   ],
+   "gun": false
+  },
+  {
+   "key": "villager_0f",
+   "file": "../assets_src/modularwomen/Medieval.gltf",
+   "team": [
+    "LightBrown"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "axe",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.15,
+      0
+     ],
+     "scale": 1,
+     "part": 1
+    },
+    {
+     "kind": "pick",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.15,
+      0
+     ],
+     "scale": 1,
+     "part": 2
+    },
+    {
+     "kind": "hoe",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.25,
+      0
+     ],
+     "scale": 1,
+     "part": 3
+    },
+    {
+     "kind": "hammer",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.1,
+      0
+     ],
+     "scale": 1,
+     "part": 4
+    },
+    {
+     "kind": "basket",
+     "bone": "Wrist.L",
+     "part": 5
+    },
+    {
+     "kind": "bundle",
+     "bone": "Chest",
+     "at": [
+      0,
+      -0.7,
+      1.1
+     ],
+     "fitSeg": "Head",
+     "scale": 0.8,
+     "part": 15
+    }
+   ],
+   "gun": false,
+   "recolor": {
+    "Metal": "#6a5a44",
+    "Metal_Dark": "#4a3e30"
+   }
+  },
+  {
+   "key": "villager_4",
+   "file": "../assets_src/modularmen/Adventurer.gltf",
+   "team": [
+    "Green"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "cap",
+     "bone": "Head",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 0.8
+    },
+    {
+     "kind": "axe",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.15,
+      0
+     ],
+     "scale": 1,
+     "part": 1
+    },
+    {
+     "kind": "pick",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.15,
+      0
+     ],
+     "scale": 1,
+     "part": 2
+    },
+    {
+     "kind": "hoe",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.25,
+      0
+     ],
+     "scale": 1,
+     "part": 3
+    },
+    {
+     "kind": "hammer",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.1,
+      0
+     ],
+     "scale": 1,
+     "part": 4
+    },
+    {
+     "kind": "basket",
+     "bone": "Wrist.L",
+     "part": 5
+    },
+    {
+     "kind": "bundle",
+     "bone": "Chest",
+     "at": [
+      0,
+      -0.7,
+      1.1
+     ],
+     "fitSeg": "Head",
+     "scale": 0.8,
+     "part": 15
+    }
+   ],
+   "gun": false
+  },
+  {
+   "key": "villager_4f",
+   "file": "../assets_src/modularwomen/Casual.gltf",
+   "team": [
+    "Orange"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "axe",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.15,
+      0
+     ],
+     "scale": 1,
+     "part": 1
+    },
+    {
+     "kind": "pick",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.15,
+      0
+     ],
+     "scale": 1,
+     "part": 2
+    },
+    {
+     "kind": "hoe",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.25,
+      0
+     ],
+     "scale": 1,
+     "part": 3
+    },
+    {
+     "kind": "hammer",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.1,
+      0
+     ],
+     "scale": 1,
+     "part": 4
+    },
+    {
+     "kind": "basket",
+     "bone": "Wrist.L",
+     "part": 5
+    },
+    {
+     "kind": "bundle",
+     "bone": "Chest",
+     "at": [
+      0,
+      -0.7,
+      1.1
+     ],
+     "fitSeg": "Head",
+     "scale": 0.8,
+     "part": 15
+    }
+   ],
+   "gun": false
+  },
+  {
+   "key": "villager_6",
+   "file": "../assets_src/modularmen/Worker.gltf",
+   "team": [
+    "Worker_Vest"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "axe",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.15,
+      0
+     ],
+     "scale": 1,
+     "part": 1
+    },
+    {
+     "kind": "pick",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.15,
+      0
+     ],
+     "scale": 1,
+     "part": 2
+    },
+    {
+     "kind": "hoe",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.25,
+      0
+     ],
+     "scale": 1,
+     "part": 3
+    },
+    {
+     "kind": "hammer",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.1,
+      0
+     ],
+     "scale": 1,
+     "part": 4
+    },
+    {
+     "kind": "basket",
+     "bone": "Wrist.L",
+     "part": 5
+    },
+    {
+     "kind": "bundle",
+     "bone": "Chest",
+     "at": [
+      0,
+      -0.7,
+      1.1
+     ],
+     "fitSeg": "Head",
+     "scale": 0.8,
+     "part": 15
+    }
+   ],
+   "gun": false
+  },
+  {
+   "key": "villager_6f",
+   "file": "../assets_src/modularwomen/Worker.gltf",
+   "team": [
+    "Worker_Vest"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "axe",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.15,
+      0
+     ],
+     "scale": 1,
+     "part": 1
+    },
+    {
+     "kind": "pick",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.15,
+      0
+     ],
+     "scale": 1,
+     "part": 2
+    },
+    {
+     "kind": "hoe",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.25,
+      0
+     ],
+     "scale": 1,
+     "part": 3
+    },
+    {
+     "kind": "hammer",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.1,
+      0
+     ],
+     "scale": 1,
+     "part": 4
+    },
+    {
+     "kind": "basket",
+     "bone": "Wrist.L",
+     "part": 5
+    },
+    {
+     "kind": "bundle",
+     "bone": "Chest",
+     "at": [
+      0,
+      -0.7,
+      1.1
+     ],
+     "fitSeg": "Head",
+     "scale": 0.8,
+     "part": 15
+    }
+   ],
+   "gun": false
+  },
+  {
+   "key": "villager_8",
+   "file": "../assets_src/modularmen/Spacesuit.gltf",
+   "team": [
+    "SciFi_Light_Accent"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "axe",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.15,
+      0
+     ],
+     "scale": 1,
+     "part": 1
+    },
+    {
+     "kind": "pick",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.15,
+      0
+     ],
+     "scale": 1,
+     "part": 2
+    },
+    {
+     "kind": "hoe",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.25,
+      0
+     ],
+     "scale": 1,
+     "part": 3
+    },
+    {
+     "kind": "hammer",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.1,
+      0
+     ],
+     "scale": 1,
+     "part": 4
+    },
+    {
+     "kind": "basket",
+     "bone": "Wrist.L",
+     "part": 5
+    },
+    {
+     "kind": "bundle",
+     "bone": "Chest",
+     "at": [
+      0,
+      -0.7,
+      1.1
+     ],
+     "fitSeg": "Head",
+     "scale": 0.8,
+     "part": 15
+    }
+   ],
+   "gun": false
+  },
+  {
+   "key": "villager_8f",
+   "file": "../assets_src/modularwomen/SciFi.gltf",
+   "team": [
+    "LightBlue"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "axe",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.15,
+      0
+     ],
+     "scale": 1,
+     "part": 1
+    },
+    {
+     "kind": "pick",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.15,
+      0
+     ],
+     "scale": 1,
+     "part": 2
+    },
+    {
+     "kind": "hoe",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.25,
+      0
+     ],
+     "scale": 1,
+     "part": 3
+    },
+    {
+     "kind": "hammer",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.1,
+      0
+     ],
+     "scale": 1,
+     "part": 4
+    },
+    {
+     "kind": "basket",
+     "bone": "Wrist.L",
+     "part": 5
+    },
+    {
+     "kind": "bundle",
+     "bone": "Chest",
+     "at": [
+      0,
+      -0.7,
+      1.1
+     ],
+     "fitSeg": "Head",
+     "scale": 0.8,
+     "part": 15
+    }
+   ],
+   "gun": false
+  },
+  {
+   "key": "militia_0",
+   "file": "../assets_src/modularmen/King.gltf",
+   "team": [
+    "Blue"
+   ],
+   "hideMats": [
+    "Gold"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "helm_nasal",
+     "bone": "Head",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 0.8
+    },
+    {
+     "kind": "tabard",
+     "bone": "Chest",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 1.5,
+     "fitSeg": "Head",
+     "fitAxis": "x"
+    },
+    {
+     "kind": "sword",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      0.75,
+      0
+     ],
+     "scale": 1
+    },
+    {
+     "kind": "shield_round",
+     "bone": "LowerArm.L",
+     "at": [
+      0,
+      1,
+      0
+     ],
+     "fit": 1.9,
+     "rot": [
+      0,
+      0,
+      1.5707963267948966
+     ]
+    }
+   ],
+   "gun": false
+  },
+  {
+   "key": "militia_1",
+   "file": "../assets_src/modularmen/King.gltf",
+   "team": [
+    "Blue"
+   ],
+   "hideMats": [
+    "Gold"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "helm_kettle",
+     "bone": "Head",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 0.8
+    },
+    {
+     "kind": "tabard",
+     "bone": "Chest",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 1.5,
+     "fitSeg": "Head",
+     "fitAxis": "x"
+    },
+    {
+     "kind": "sword",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      0.75,
+      0
+     ],
+     "scale": 1
+    },
+    {
+     "kind": "shield_kite",
+     "bone": "LowerArm.L",
+     "at": [
+      0,
+      1,
+      0
+     ],
+     "fit": 1.9,
+     "rot": [
+      0,
+      0,
+      1.5707963267948966
+     ]
+    }
+   ],
+   "gun": false
+  },
+  {
+   "key": "militia_2",
+   "file": "../assets_src/modularmen/King.gltf",
+   "team": [
+    "Blue"
+   ],
+   "hideMats": [
+    "Gold"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "helm_great",
+     "bone": "Head",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 0.8
+    },
+    {
+     "kind": "surcoat",
+     "bone": "Chest",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 1.5,
+     "fitSeg": "Head",
+     "fitAxis": "x"
+    },
+    {
+     "kind": "greatsword",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      0.9,
+      0
+     ],
+     "scale": 1
+    }
+   ],
+   "gun": false
+  },
+  {
+   "key": "militia_3",
+   "file": "../assets_src/modularmen/Adventurer.gltf",
+   "team": [
+    "Green"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "helm_morion",
+     "bone": "Head",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 0.8
+    },
+    {
+     "kind": "cuirass",
+     "bone": "Chest",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 1.5,
+     "fitSeg": "Head",
+     "fitAxis": "x"
+    },
+    {
+     "kind": "sword",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      0.75,
+      0
+     ],
+     "scale": 1
+    },
+    {
+     "kind": "shield_round",
+     "bone": "LowerArm.L",
+     "at": [
+      0,
+      1,
+      0
+     ],
+     "fit": 1.9,
+     "rot": [
+      0,
+      0,
+      1.5707963267948966
+     ]
+    }
+   ],
+   "gun": false
+  },
+  {
+   "key": "militia_4",
+   "file": "../assets_src/modularmen/Casual_2.gltf",
+   "team": [],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "shako",
+     "bone": "Head",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 0.8
+    },
+    {
+     "kind": "coat",
+     "bone": "Chest",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 1.5,
+     "fitSeg": "Head",
+     "fitAxis": "x"
+    },
+    {
+     "kind": "musket",
+     "bone": "Wrist.R",
+     "scale": 0.85
+    }
+   ],
+   "gun": true,
+   "recolor": {
+    "LightBrown": "#e8e2d0",
+    "LightBlue": "#3a3a44",
+    "White": "#f0f0f0"
+   }
+  },
+  {
+   "key": "militia_5",
+   "file": "../assets_src/modularmen/Adventurer.gltf",
+   "team": [],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "helm_brodie",
+     "bone": "Head",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 0.8
+    },
+    {
+     "kind": "rifle",
+     "bone": "Wrist.R",
+     "scale": 0.8
+    },
+    {
+     "kind": "armband",
+     "bone": "UpperArm.L",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 1.05
+    }
+   ],
+   "gun": true,
+   "recolor": {
+    "LightGreen": "#5f5d3c",
+    "Brown": "#4a4030",
+    "Brown2": "#3a3326",
+    "Green": "#6a6a44"
+   }
+  },
+  {
+   "key": "militia_5f",
+   "file": "../assets_src/modularwomen/Adventurer.gltf",
+   "team": [],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "helm_brodie",
+     "bone": "Head",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 0.8
+    },
+    {
+     "kind": "rifle",
+     "bone": "Wrist.R",
+     "scale": 0.8
+    },
+    {
+     "kind": "armband",
+     "bone": "UpperArm.L",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 1.05
+    }
+   ],
+   "gun": true,
+   "recolor": {
+    "LightGreen": "#5f5d3c",
+    "Brown_02": "#4a4030",
+    "Brown2": "#3a3326"
+   }
+  },
+  {
+   "key": "militia_6",
+   "file": "../assets_src/modularmen/Swat.gltf",
+   "team": [],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "helm_m1",
+     "bone": "Head",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 0.8
+    },
+    {
+     "kind": "smg",
+     "bone": "Wrist.R",
+     "scale": 0.85
+    },
+    {
+     "kind": "armband",
+     "bone": "UpperArm.L",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 1.05
+    }
+   ],
+   "gun": true,
+   "recolor": {
+    "Swat": "#3e4a30",
+    "Swat_Black": "#2a3322"
+   }
+  },
+  {
+   "key": "militia_6f",
+   "file": "../assets_src/modularwomen/Soldier.gltf",
+   "team": [],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "helm_m1",
+     "bone": "Head",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 0.8
+    },
+    {
+     "kind": "smg",
+     "bone": "Wrist.R",
+     "scale": 0.85
+    },
+    {
+     "kind": "armband",
+     "bone": "UpperArm.L",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 1.05
+    }
+   ],
+   "gun": true,
+   "recolor": {
+    "Swat": "#56603c",
+    "Black": "#2e3322",
+    "Grey": "#4a4f3a"
+   }
+  },
+  {
+   "key": "militia_7",
+   "file": "../assets_src/modularmen/Swat.gltf",
+   "team": [
+    "Swat_Black"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "smg",
+     "bone": "Wrist.R",
+     "scale": 0.85
+    }
+   ],
+   "gun": true
+  },
+  {
+   "key": "militia_7f",
+   "file": "../assets_src/modularwomen/Soldier.gltf",
+   "team": [
+    "Swat"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "helm_mod",
+     "bone": "Head",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 0.8
+    },
+    {
+     "kind": "smg",
+     "bone": "Wrist.R",
+     "scale": 0.85
+    }
+   ],
+   "gun": true
+  },
+  {
+   "key": "militia_8",
+   "file": "../assets_src/modularmen/Spacesuit.gltf",
+   "team": [
+    "SciFi_Light_Accent"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "laser",
+     "bone": "Wrist.R",
+     "scale": 0.85
+    },
+    {
+     "kind": "jetpack",
+     "bone": "Chest",
+     "at": [
+      0,
+      0.2,
+      -1
+     ],
+     "fit": 0.55
+    }
+   ],
+   "gun": true
+  },
+  {
+   "key": "militia_8f",
+   "file": "../assets_src/modularwomen/SciFi.gltf",
+   "team": [
+    "LightBlue"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "helm_future",
+     "bone": "Head",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 0.8
+    },
+    {
+     "kind": "laser",
+     "bone": "Wrist.R",
+     "scale": 0.85
+    },
+    {
+     "kind": "jetpack",
+     "bone": "Chest",
+     "at": [
+      0,
+      0.2,
+      -1
+     ],
+     "fit": 0.55
+    }
+   ],
+   "gun": true
+  },
+  {
+   "key": "spear_0",
+   "file": "../assets_src/modularmen/Farmer.gltf",
+   "team": [
+    "LightBlue"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "helm_kettle",
+     "bone": "Head",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 0.8
+    },
+    {
+     "kind": "spear",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.45,
+      0
+     ],
+     "scale": 0.8
+    }
+   ],
+   "gun": false
+  },
+  {
+   "key": "spear_1",
+   "file": "../assets_src/modularmen/Adventurer.gltf",
+   "team": [
+    "Green"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "helm_kettle",
+     "bone": "Head",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 0.8
+    },
+    {
+     "kind": "tabard",
+     "bone": "Chest",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 1.5,
+     "fitSeg": "Head",
+     "fitAxis": "x"
+    },
+    {
+     "kind": "spear",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.45,
+      0
+     ],
+     "scale": 0.8
+    },
+    {
+     "kind": "shield_round",
+     "bone": "LowerArm.L",
+     "at": [
+      0,
+      1,
+      0
+     ],
+     "fit": 1.9,
+     "rot": [
+      0,
+      0,
+      1.5707963267948966
+     ]
+    }
+   ],
+   "gun": false
+  },
+  {
+   "key": "spear_2",
+   "file": "../assets_src/modularmen/King.gltf",
+   "team": [
+    "Blue"
+   ],
+   "hideMats": [
+    "Gold"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "helm_sallet",
+     "bone": "Head",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 0.8
+    },
+    {
+     "kind": "tabard",
+     "bone": "Chest",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 1.5,
+     "fitSeg": "Head",
+     "fitAxis": "x"
+    },
+    {
+     "kind": "pike",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.5,
+      0
+     ],
+     "scale": 0.85
+    }
+   ],
+   "gun": false
+  },
+  {
+   "key": "spear_3",
+   "file": "../assets_src/modularmen/Adventurer.gltf",
+   "team": [
+    "Green"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "helm_morion",
+     "bone": "Head",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 0.8
+    },
+    {
+     "kind": "cuirass",
+     "bone": "Chest",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 1.5,
+     "fitSeg": "Head",
+     "fitAxis": "x"
+    },
+    {
+     "kind": "pike",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.5,
+      0
+     ],
+     "scale": 0.85
+    }
+   ],
+   "gun": false
+  },
+  {
+   "key": "spear_4",
+   "file": "../assets_src/modularmen/Casual_2.gltf",
+   "team": [],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "tricorn",
+     "bone": "Head",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 0.8
+    },
+    {
+     "kind": "coat",
+     "bone": "Chest",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 1.5,
+     "fitSeg": "Head",
+     "fitAxis": "x"
+    },
+    {
+     "kind": "musket",
+     "bone": "Wrist.R",
+     "scale": 0.85
+    }
+   ],
+   "gun": true,
+   "recolor": {
+    "LightBrown": "#e8e2d0",
+    "LightBlue": "#3a3a44",
+    "White": "#f0f0f0"
+   }
+  },
+  {
+   "key": "spear_5",
+   "file": "../assets_src/modularmen/Adventurer.gltf",
+   "team": [],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "helm_m1",
+     "bone": "Head",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 0.8
+    },
+    {
+     "kind": "bazooka",
+     "bone": "Wrist.R",
+     "scale": 0.65
+    },
+    {
+     "kind": "armband",
+     "bone": "UpperArm.L",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 1.05
+    }
+   ],
+   "gun": true,
+   "recolor": {
+    "LightGreen": "#5f5d3c",
+    "Brown": "#4a4030",
+    "Brown2": "#3a3326",
+    "Green": "#6a6a44"
+   }
+  },
+  {
+   "key": "spear_6",
+   "file": "../assets_src/modularmen/Swat.gltf",
+   "team": [],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "helm_m1",
+     "bone": "Head",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 0.8
+    },
+    {
+     "kind": "atgm",
+     "bone": "Wrist.R",
+     "scale": 0.7
+    },
+    {
+     "kind": "armband",
+     "bone": "UpperArm.L",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 1.05
+    }
+   ],
+   "gun": true,
+   "recolor": {
+    "Swat": "#56603c",
+    "Swat_Black": "#3a4228"
+   }
+  },
+  {
+   "key": "spear_7",
+   "file": "../assets_src/modularmen/Swat.gltf",
+   "team": [
+    "Swat_Black"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "atgm",
+     "bone": "Wrist.R",
+     "scale": 0.7
+    }
+   ],
+   "gun": true
+  },
+  {
+   "key": "spear_7f",
+   "file": "../assets_src/modularwomen/Soldier.gltf",
+   "team": [
+    "Swat"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "helm_mod",
+     "bone": "Head",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 0.8
+    },
+    {
+     "kind": "atgm",
+     "bone": "Wrist.R",
+     "scale": 0.7
+    }
+   ],
+   "gun": true
+  },
+  {
+   "key": "spear_8",
+   "file": "../assets_src/modularmen/Spacesuit.gltf",
+   "team": [
+    "SciFi_Light_Accent"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "pulse",
+     "bone": "Wrist.R",
+     "scale": 0.75
+    }
+   ],
+   "gun": true
+  },
+  {
+   "key": "spear_8f",
+   "file": "../assets_src/modularwomen/SciFi.gltf",
+   "team": [
+    "LightBlue"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "helm_future",
+     "bone": "Head",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 0.8
+    },
+    {
+     "kind": "pulse",
+     "bone": "Wrist.R",
+     "scale": 0.75
+    }
+   ],
+   "gun": true
+  },
+  {
+   "key": "archer_0",
+   "file": "../assets_src/modularmen/Adventurer.gltf",
+   "team": [
+    "Green"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "hood",
+     "bone": "Head",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 0.8
+    },
+    {
+     "kind": "bow",
+     "bone": "Wrist.L",
+     "rot": [
+      0,
+      0,
+      1.5707963267948966
+     ]
+    },
+    {
+     "kind": "quiver",
+     "bone": "Chest",
+     "at": [
+      0,
+      0.2,
+      -1
+     ],
+     "fit": 0.55
+    }
+   ],
+   "gun": false
+  },
+  {
+   "key": "archer_0f",
+   "file": "../assets_src/modularwomen/Medieval.gltf",
+   "team": [
+    "LightBrown"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "bow",
+     "bone": "Wrist.L",
+     "rot": [
+      0,
+      0,
+      1.5707963267948966
+     ]
+    },
+    {
+     "kind": "quiver",
+     "bone": "Chest",
+     "at": [
+      0,
+      0.2,
+      -1
+     ],
+     "fit": 0.55
+    }
+   ],
+   "gun": false
+  },
+  {
+   "key": "archer_2",
+   "file": "../assets_src/modularmen/Adventurer.gltf",
+   "team": [
+    "Green"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "helm_kettle",
+     "bone": "Head",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 0.8
+    },
+    {
+     "kind": "tabard",
+     "bone": "Chest",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 1.5,
+     "fitSeg": "Head",
+     "fitAxis": "x"
+    },
+    {
+     "kind": "crossbow",
+     "bone": "Wrist.R",
+     "scale": 1
+    },
+    {
+     "kind": "quiver",
+     "bone": "Chest",
+     "at": [
+      0,
+      0.2,
+      -1
+     ],
+     "fit": 0.55
+    }
+   ],
+   "gun": false
+  },
+  {
+   "key": "archer_2f",
+   "file": "../assets_src/modularwomen/Medieval.gltf",
+   "team": [
+    "LightBrown"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "helm_kettle",
+     "bone": "Head",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 0.8
+    },
+    {
+     "kind": "crossbow",
+     "bone": "Wrist.R",
+     "scale": 1
+    },
+    {
+     "kind": "quiver",
+     "bone": "Chest",
+     "at": [
+      0,
+      0.2,
+      -1
+     ],
+     "fit": 0.55
+    }
+   ],
+   "gun": false
+  },
+  {
+   "key": "archer_3",
+   "file": "../assets_src/modularmen/Adventurer.gltf",
+   "team": [
+    "Green"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "helm_morion",
+     "bone": "Head",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 0.8
+    },
+    {
+     "kind": "musket",
+     "bone": "Wrist.R",
+     "scale": 0.85
+    },
+    {
+     "kind": "bandolier",
+     "bone": "Chest",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 1.5,
+     "fitSeg": "Head",
+     "fitAxis": "x"
+    }
+   ],
+   "gun": true
+  },
+  {
+   "key": "archer_4",
+   "file": "../assets_src/modularmen/Casual_2.gltf",
+   "team": [],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "bicorne",
+     "bone": "Head",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 0.8
+    },
+    {
+     "kind": "coat",
+     "bone": "Chest",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 1.5,
+     "fitSeg": "Head",
+     "fitAxis": "x"
+    },
+    {
+     "kind": "rifle",
+     "bone": "Wrist.R",
+     "scale": 0.8
+    }
+   ],
+   "gun": true,
+   "recolor": {
+    "LightBrown": "#e8e2d0",
+    "LightBlue": "#3a3a44",
+    "White": "#f0f0f0"
+   }
+  },
+  {
+   "key": "archer_5",
+   "file": "../assets_src/modularmen/Adventurer.gltf",
+   "team": [],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "helm_brodie",
+     "bone": "Head",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 0.8
+    },
+    {
+     "kind": "mg",
+     "bone": "Wrist.R",
+     "scale": 0.8
+    },
+    {
+     "kind": "armband",
+     "bone": "UpperArm.L",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 1.05
+    }
+   ],
+   "gun": true,
+   "recolor": {
+    "LightGreen": "#5f5d3c",
+    "Brown": "#4a4030",
+    "Brown2": "#3a3326",
+    "Green": "#6a6a44"
+   }
+  },
+  {
+   "key": "archer_5f",
+   "file": "../assets_src/modularwomen/Adventurer.gltf",
+   "team": [],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "helm_brodie",
+     "bone": "Head",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 0.8
+    },
+    {
+     "kind": "mg",
+     "bone": "Wrist.R",
+     "scale": 0.8
+    },
+    {
+     "kind": "armband",
+     "bone": "UpperArm.L",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 1.05
+    }
+   ],
+   "gun": true,
+   "recolor": {
+    "LightGreen": "#5f5d3c",
+    "Brown_02": "#4a4030",
+    "Brown2": "#3a3326"
+   }
+  },
+  {
+   "key": "archer_6",
+   "file": "../assets_src/modularmen/Swat.gltf",
+   "team": [],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "helm_m1",
+     "bone": "Head",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 0.8
+    },
+    {
+     "kind": "mg",
+     "bone": "Wrist.R",
+     "scale": 0.8
+    },
+    {
+     "kind": "armband",
+     "bone": "UpperArm.L",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 1.05
+    }
+   ],
+   "gun": true,
+   "recolor": {
+    "Swat": "#56603c",
+    "Swat_Black": "#3a4228"
+   }
+  },
+  {
+   "key": "archer_7",
+   "file": "../assets_src/modularmen/Swat.gltf",
+   "team": [
+    "Swat_Black"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "beret",
+     "bone": "Head",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 0.8
+    },
+    {
+     "kind": "sniper",
+     "bone": "Wrist.R",
+     "scale": 0.8
+    }
+   ],
+   "gun": true
+  },
+  {
+   "key": "archer_7f",
+   "file": "../assets_src/modularwomen/Soldier.gltf",
+   "team": [
+    "Swat"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "beret",
+     "bone": "Head",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 0.8
+    },
+    {
+     "kind": "sniper",
+     "bone": "Wrist.R",
+     "scale": 0.8
+    }
+   ],
+   "gun": true
+  },
+  {
+   "key": "archer_8",
+   "file": "../assets_src/modularmen/Spacesuit.gltf",
+   "team": [
+    "SciFi_Light_Accent"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "laser",
+     "bone": "Wrist.R",
+     "scale": 0.85
+    }
+   ],
+   "gun": true
+  },
+  {
+   "key": "archer_8f",
+   "file": "../assets_src/modularwomen/SciFi.gltf",
+   "team": [
+    "LightBlue"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "helm_future",
+     "bone": "Head",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 0.8
+    },
+    {
+     "kind": "laser",
+     "bone": "Wrist.R",
+     "scale": 0.85
+    }
+   ],
+   "gun": true
+  },
+  {
+   "key": "monk_0",
+   "file": "../assets_src/modularmen/Casual_2.gltf",
+   "team": [],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "robe",
+     "bone": "Chest",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 1.05,
+     "fitSeg": "Head",
+     "fitAxis": "x"
+    },
+    {
+     "kind": "hood",
+     "bone": "Head",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 0.8,
+     "color": 5914152
+    },
+    {
+     "kind": "staff",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.5,
+      0
+     ],
+     "scale": 1
+    }
+   ],
+   "gun": false,
+   "recolor": {
+    "LightBrown": "#5a3e28",
+    "LightBlue": "#4a3222",
+    "White": "#6a4a30",
+    "Red_Dark": "#4a3222"
+   }
+  },
+  {
+   "key": "monk_3",
+   "file": "../assets_src/modularmen/Suit.gltf",
+   "team": [
+    "Tie"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "cross",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.5,
+      0
+     ],
+     "scale": 1
+    },
+    {
+     "kind": "armband",
+     "bone": "UpperArm.L",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 1.05
+    }
+   ],
+   "gun": false
+  },
+  {
+   "key": "monk_5",
+   "file": "../assets_src/modularmen/Casual_2.gltf",
+   "team": [],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "cap",
+     "bone": "Head",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 0.8
+    },
+    {
+     "kind": "medkit",
+     "bone": "Wrist.L"
+    },
+    {
+     "kind": "armband",
+     "bone": "UpperArm.L",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 1.05
+    }
+   ],
+   "gun": false,
+   "recolor": {
+    "LightBrown": "#e8e8e4",
+    "LightBlue": "#dcdcd8",
+    "White": "#f4f4f4",
+    "Red_Dark": "#c82828"
+   }
+  },
+  {
+   "key": "monk_5f",
+   "file": "../assets_src/modularwomen/Casual.gltf",
+   "team": [],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "cap",
+     "bone": "Head",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 0.8
+    },
+    {
+     "kind": "medkit",
+     "bone": "Wrist.L"
+    },
+    {
+     "kind": "armband",
+     "bone": "UpperArm.L",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 1.05
+    }
+   ],
+   "gun": false,
+   "recolor": {
+    "Grey": "#dcdcd8",
+    "White": "#f4f4f4",
+    "Orange": "#e8e8e4"
+   }
+  },
+  {
+   "key": "monk_7",
+   "file": "../assets_src/modularmen/Suit.gltf",
+   "team": [
+    "Tie"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "tablet",
+     "bone": "Wrist.L"
+    },
+    {
+     "kind": "armband",
+     "bone": "UpperArm.L",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 1.05
+    }
+   ],
+   "gun": false
+  },
+  {
+   "key": "monk_7f",
+   "file": "../assets_src/modularwomen/Suit.gltf",
+   "team": [
+    "White"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "tablet",
+     "bone": "Wrist.L"
+    },
+    {
+     "kind": "armband",
+     "bone": "UpperArm.L",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 1.05
+    }
+   ],
+   "gun": false
+  },
+  {
+   "key": "monk_8",
+   "file": "../assets_src/modularmen/Spacesuit.gltf",
+   "team": [
+    "SciFi_Light_Accent"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "tablet",
+     "bone": "Wrist.L"
+    }
+   ],
+   "gun": false
+  },
+  {
+   "key": "monk_8f",
+   "file": "../assets_src/modularwomen/SciFi.gltf",
+   "team": [
+    "LightBlue"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "tablet",
+     "bone": "Wrist.L"
+    }
+   ],
+   "gun": false
+  },
+  {
+   "key": "almogavar_0",
+   "file": "../assets_src/modularmen/Adventurer.gltf",
+   "team": [
+    "Green"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "cap",
+     "bone": "Head",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 0.8
+    },
+    {
+     "kind": "spear",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.45,
+      0
+     ],
+     "scale": 0.65
+    },
+    {
+     "kind": "shield_round",
+     "bone": "LowerArm.L",
+     "at": [
+      0,
+      1,
+      0
+     ],
+     "fit": 1.9,
+     "rot": [
+      0,
+      0,
+      1.5707963267948966
+     ]
+    }
+   ],
+   "gun": false
+  },
+  {
+   "key": "axeman_0",
+   "file": "../assets_src/modularmen/Adventurer.gltf",
+   "team": [
+    "Green"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "helm_nasal",
+     "bone": "Head",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 0.8
+    },
+    {
+     "kind": "tabard",
+     "bone": "Chest",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 1.5,
+     "fitSeg": "Head",
+     "fitAxis": "x"
+    },
+    {
+     "kind": "axe",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      1.15,
+      0
+     ],
+     "scale": 1.2
+    }
+   ],
+   "gun": false
+  },
+  {
+   "key": "longbow_0",
+   "file": "../assets_src/modularmen/Adventurer.gltf",
+   "team": [
+    "Green"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "hood",
+     "bone": "Head",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 0.8
+    },
+    {
+     "kind": "bow",
+     "bone": "Wrist.L",
+     "rot": [
+      0,
+      0,
+      1.5707963267948966
+     ],
+     "scale": 1.35
+    },
+    {
+     "kind": "quiver",
+     "bone": "Chest",
+     "at": [
+      0,
+      0.2,
+      -1
+     ],
+     "fit": 0.55
+    }
+   ],
+   "gun": false
+  },
+  {
+   "key": "longbow_0f",
+   "file": "../assets_src/modularwomen/Medieval.gltf",
+   "team": [
+    "LightBrown"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "bow",
+     "bone": "Wrist.L",
+     "rot": [
+      0,
+      0,
+      1.5707963267948966
+     ],
+     "scale": 1.35
+    },
+    {
+     "kind": "quiver",
+     "bone": "Chest",
+     "at": [
+      0,
+      0.2,
+      -1
+     ],
+     "fit": 0.55
+    }
+   ],
+   "gun": false
+  },
+  {
+   "key": "tknight_0",
+   "file": "../assets_src/modularmen/King.gltf",
+   "team": [
+    "Blue"
+   ],
+   "hideMats": [
+    "Gold"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "idle_gun": "Idle_Gun",
+    "idle_sword": "Idle_Sword",
+    "walk": "Walk",
+    "run": "Run",
+    "attack": {
+     "name": "Sword_Slash",
+     "loop": false
+    },
+    "shoot": {
+     "name": "Gun_Shoot",
+     "loop": false
+    },
+    "punch": {
+     "name": "Punch_Right",
+     "loop": false
+    },
+    "work": "Sword_Slash",
+    "gather": "Interact",
+    "cast": "Wave",
+    "hit": {
+     "name": "HitRecieve",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "fold": "(Index|Middle|Ring|Pinky|Thumb)",
+   "height": 0.78,
+   "props": [
+    {
+     "kind": "helm_great",
+     "bone": "Head",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 0.8
+    },
+    {
+     "kind": "surcoat",
+     "bone": "Chest",
+     "at": [
+      0,
+      0,
+      0
+     ],
+     "fit": 1.5,
+     "fitSeg": "Head",
+     "fitAxis": "x"
+    },
+    {
+     "kind": "greatsword",
+     "bone": "Wrist.R",
+     "rot": [
+      0,
+      0.9,
+      0
+     ],
+     "scale": 1.15
+    }
+   ],
+   "gun": false
+  },
+  {
+   "key": "scout_0",
+   "file": "../assets_src/animals/Horse.gltf",
+   "team": [],
+   "clips": {
+    "idle": "Idle",
+    "walk": "Walk",
+    "run": "Gallop",
+    "attack": {
+     "name": "Attack_Headbutt",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    },
+    "gather": "Eating"
+   },
+   "height": 1.05,
+   "tris0": 4200,
+   "tris1": 1300,
+   "props": [],
+   "riders": [
+    {
+     "file": "../assets_src/modularmen/Adventurer.gltf",
+     "team": [
+      "Green"
+     ],
+     "clip": "Idle",
+     "t": 0.2,
+     "aim": [
+      [
+       "UpperLeg.L",
+       "LowerLeg.L",
+       [
+        0.5,
+        -0.3,
+        0.8
+       ]
+      ],
+      [
+       "LowerLeg.L",
+       "Foot.L",
+       [
+        0.15,
+        -1,
+        -0.15
+       ]
+      ],
+      [
+       "UpperLeg.R",
+       "LowerLeg.R",
+       [
+        -0.5,
+        -0.3,
+        0.8
+       ]
+      ],
+      [
+       "LowerLeg.R",
+       "Foot.R",
+       [
+        -0.15,
+        -1,
+        -0.15
+       ]
+      ],
+      [
+       "UpperArm.R",
+       "LowerArm.R",
+       [
+        -0.3,
+        -0.75,
+        0.55
+       ]
+      ],
+      [
+       "LowerArm.R",
+       "Wrist.R",
+       [
+        -0.05,
+        -0.25,
+        1
+       ]
+      ],
+      [
+       "UpperArm.L",
+       "LowerArm.L",
+       [
+        0.3,
+        -0.75,
+        0.55
+       ]
+      ],
+      [
+       "LowerArm.L",
+       "Wrist.L",
+       [
+        0.05,
+        -0.25,
+        1
+       ]
+      ]
+     ],
+     "bone": "Torso",
+     "ratio": 0.78,
+     "off": [
+      0,
+      -0.02,
+      0
+     ],
+     "props": [
+      {
+       "kind": "hood",
+       "bone": "Head",
+       "off": [
+        0,
+        0.035,
+        0
+       ],
+       "scale": 0.052
+      },
+      {
+       "kind": "spear",
+       "bone": "Wrist.R",
+       "rot": [
+        -0.5,
+        0,
+        0
+       ],
+       "scale": 0.8
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key": "scout_3",
+   "file": "../assets_src/animals/Horse_White.gltf",
+   "team": [],
+   "clips": {
+    "idle": "Idle",
+    "walk": "Walk",
+    "run": "Gallop",
+    "attack": {
+     "name": "Attack_Headbutt",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    },
+    "gather": "Eating"
+   },
+   "height": 1.05,
+   "tris0": 4200,
+   "tris1": 1300,
+   "props": [],
+   "riders": [
+    {
+     "file": "../assets_src/modularmen/Casual_2.gltf",
+     "team": [],
+     "clip": "Idle",
+     "t": 0.2,
+     "aim": [
+      [
+       "UpperLeg.L",
+       "LowerLeg.L",
+       [
+        0.5,
+        -0.3,
+        0.8
+       ]
+      ],
+      [
+       "LowerLeg.L",
+       "Foot.L",
+       [
+        0.15,
+        -1,
+        -0.15
+       ]
+      ],
+      [
+       "UpperLeg.R",
+       "LowerLeg.R",
+       [
+        -0.5,
+        -0.3,
+        0.8
+       ]
+      ],
+      [
+       "LowerLeg.R",
+       "Foot.R",
+       [
+        -0.15,
+        -1,
+        -0.15
+       ]
+      ],
+      [
+       "UpperArm.R",
+       "LowerArm.R",
+       [
+        -0.3,
+        -0.75,
+        0.55
+       ]
+      ],
+      [
+       "LowerArm.R",
+       "Wrist.R",
+       [
+        -0.05,
+        -0.25,
+        1
+       ]
+      ],
+      [
+       "UpperArm.L",
+       "LowerArm.L",
+       [
+        0.3,
+        -0.75,
+        0.55
+       ]
+      ],
+      [
+       "LowerArm.L",
+       "Wrist.L",
+       [
+        0.05,
+        -0.25,
+        1
+       ]
+      ]
+     ],
+     "bone": "Torso",
+     "ratio": 0.78,
+     "off": [
+      0,
+      -0.02,
+      0
+     ],
+     "props": [
+      {
+       "kind": "shako",
+       "bone": "Head",
+       "off": [
+        0,
+        0.035,
+        0
+       ],
+       "scale": 0.066
+      },
+      {
+       "kind": "sword",
+       "bone": "Wrist.R",
+       "rot": [
+        -0.9,
+        0,
+        0
+       ]
+      }
+     ],
+     "recolor": {
+      "LightBrown": "#e8e2d0",
+      "LightBlue": "#3a3a44",
+      "White": "#f0f0f0"
+     }
+    }
+   ]
+  },
+  {
+   "key": "scout_4",
+   "file": "../assets_src/animals/Horse.gltf",
+   "team": [],
+   "clips": {
+    "idle": "Idle",
+    "walk": "Walk",
+    "run": "Gallop",
+    "attack": {
+     "name": "Attack_Headbutt",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    },
+    "gather": "Eating"
+   },
+   "height": 1.05,
+   "tris0": 4200,
+   "tris1": 1300,
+   "props": [],
+   "riders": [
+    {
+     "file": "../assets_src/modularmen/Casual_2.gltf",
+     "team": [],
+     "clip": "Idle",
+     "t": 0.2,
+     "aim": [
+      [
+       "UpperLeg.L",
+       "LowerLeg.L",
+       [
+        0.5,
+        -0.3,
+        0.8
+       ]
+      ],
+      [
+       "LowerLeg.L",
+       "Foot.L",
+       [
+        0.15,
+        -1,
+        -0.15
+       ]
+      ],
+      [
+       "UpperLeg.R",
+       "LowerLeg.R",
+       [
+        -0.5,
+        -0.3,
+        0.8
+       ]
+      ],
+      [
+       "LowerLeg.R",
+       "Foot.R",
+       [
+        -0.15,
+        -1,
+        -0.15
+       ]
+      ],
+      [
+       "UpperArm.R",
+       "LowerArm.R",
+       [
+        -0.3,
+        -0.75,
+        0.55
+       ]
+      ],
+      [
+       "LowerArm.R",
+       "Wrist.R",
+       [
+        -0.05,
+        -0.25,
+        1
+       ]
+      ],
+      [
+       "UpperArm.L",
+       "LowerArm.L",
+       [
+        0.3,
+        -0.75,
+        0.55
+       ]
+      ],
+      [
+       "LowerArm.L",
+       "Wrist.L",
+       [
+        0.05,
+        -0.25,
+        1
+       ]
+      ]
+     ],
+     "bone": "Torso",
+     "ratio": 0.78,
+     "off": [
+      0,
+      -0.02,
+      0
+     ],
+     "props": [
+      {
+       "kind": "bicorne",
+       "bone": "Head",
+       "off": [
+        0,
+        0.035,
+        0
+       ],
+       "scale": 0.066
+      },
+      {
+       "kind": "musket",
+       "bone": "Wrist.R",
+       "rot": [
+        -0.2,
+        0,
+        0
+       ],
+       "scale": 0.8
+      }
+     ],
+     "recolor": {
+      "LightBrown": "#e8e2d0",
+      "LightBlue": "#3a3a44",
+      "White": "#f0f0f0"
+     }
+    }
+   ]
+  },
+  {
+   "key": "knight_0",
+   "file": "../assets_src/animals/Horse.gltf",
+   "team": [],
+   "clips": {
+    "idle": "Idle",
+    "walk": "Walk",
+    "run": "Gallop",
+    "attack": {
+     "name": "Attack_Headbutt",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    },
+    "gather": "Eating"
+   },
+   "height": 1.05,
+   "tris0": 4200,
+   "tris1": 1300,
+   "props": [],
+   "riders": [
+    {
+     "file": "../assets_src/modularmen/King.gltf",
+     "team": [
+      "Blue"
+     ],
+     "hideMats": [
+      "Gold"
+     ],
+     "clip": "Idle",
+     "t": 0.2,
+     "aim": [
+      [
+       "UpperLeg.L",
+       "LowerLeg.L",
+       [
+        0.5,
+        -0.3,
+        0.8
+       ]
+      ],
+      [
+       "LowerLeg.L",
+       "Foot.L",
+       [
+        0.15,
+        -1,
+        -0.15
+       ]
+      ],
+      [
+       "UpperLeg.R",
+       "LowerLeg.R",
+       [
+        -0.5,
+        -0.3,
+        0.8
+       ]
+      ],
+      [
+       "LowerLeg.R",
+       "Foot.R",
+       [
+        -0.15,
+        -1,
+        -0.15
+       ]
+      ],
+      [
+       "UpperArm.R",
+       "LowerArm.R",
+       [
+        -0.3,
+        -0.75,
+        0.55
+       ]
+      ],
+      [
+       "LowerArm.R",
+       "Wrist.R",
+       [
+        -0.05,
+        -0.25,
+        1
+       ]
+      ],
+      [
+       "UpperArm.L",
+       "LowerArm.L",
+       [
+        0.3,
+        -0.75,
+        0.55
+       ]
+      ],
+      [
+       "LowerArm.L",
+       "Wrist.L",
+       [
+        0.05,
+        -0.25,
+        1
+       ]
+      ]
+     ],
+     "bone": "Torso",
+     "ratio": 0.78,
+     "off": [
+      0,
+      -0.02,
+      0
+     ],
+     "props": [
+      {
+       "kind": "helm_nasal",
+       "bone": "Head",
+       "off": [
+        0,
+        0.035,
+        0
+       ],
+       "scale": 0.068
+      },
+      {
+       "kind": "lance",
+       "bone": "Wrist.R",
+       "rot": [
+        -0.25,
+        0,
+        0
+       ],
+       "scale": 1.1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key": "knight_1",
+   "file": "../assets_src/animals/Horse.gltf",
+   "team": [],
+   "clips": {
+    "idle": "Idle",
+    "walk": "Walk",
+    "run": "Gallop",
+    "attack": {
+     "name": "Attack_Headbutt",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    },
+    "gather": "Eating"
+   },
+   "height": 1.05,
+   "tris0": 4200,
+   "tris1": 1300,
+   "props": [],
+   "riders": [
+    {
+     "file": "../assets_src/modularmen/King.gltf",
+     "team": [
+      "Blue"
+     ],
+     "hideMats": [
+      "Gold"
+     ],
+     "clip": "Idle",
+     "t": 0.2,
+     "aim": [
+      [
+       "UpperLeg.L",
+       "LowerLeg.L",
+       [
+        0.5,
+        -0.3,
+        0.8
+       ]
+      ],
+      [
+       "LowerLeg.L",
+       "Foot.L",
+       [
+        0.15,
+        -1,
+        -0.15
+       ]
+      ],
+      [
+       "UpperLeg.R",
+       "LowerLeg.R",
+       [
+        -0.5,
+        -0.3,
+        0.8
+       ]
+      ],
+      [
+       "LowerLeg.R",
+       "Foot.R",
+       [
+        -0.15,
+        -1,
+        -0.15
+       ]
+      ],
+      [
+       "UpperArm.R",
+       "LowerArm.R",
+       [
+        -0.3,
+        -0.75,
+        0.55
+       ]
+      ],
+      [
+       "LowerArm.R",
+       "Wrist.R",
+       [
+        -0.05,
+        -0.25,
+        1
+       ]
+      ],
+      [
+       "UpperArm.L",
+       "LowerArm.L",
+       [
+        0.3,
+        -0.75,
+        0.55
+       ]
+      ],
+      [
+       "LowerArm.L",
+       "Wrist.L",
+       [
+        0.05,
+        -0.25,
+        1
+       ]
+      ]
+     ],
+     "bone": "Torso",
+     "ratio": 0.78,
+     "off": [
+      0,
+      -0.02,
+      0
+     ],
+     "props": [
+      {
+       "kind": "helm_great",
+       "bone": "Head",
+       "off": [
+        0,
+        0.035,
+        0
+       ],
+       "scale": 0.064
+      },
+      {
+       "kind": "lance",
+       "bone": "Wrist.R",
+       "rot": [
+        -0.25,
+        0,
+        0
+       ],
+       "scale": 1.1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key": "knight_2",
+   "file": "../assets_src/animals/Horse_White.gltf",
+   "team": [],
+   "clips": {
+    "idle": "Idle",
+    "walk": "Walk",
+    "run": "Gallop",
+    "attack": {
+     "name": "Attack_Headbutt",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    },
+    "gather": "Eating"
+   },
+   "height": 1.05,
+   "tris0": 4200,
+   "tris1": 1300,
+   "props": [],
+   "riders": [
+    {
+     "file": "../assets_src/modularmen/King.gltf",
+     "team": [
+      "Blue"
+     ],
+     "hideMats": [
+      "Gold"
+     ],
+     "clip": "Idle",
+     "t": 0.2,
+     "aim": [
+      [
+       "UpperLeg.L",
+       "LowerLeg.L",
+       [
+        0.5,
+        -0.3,
+        0.8
+       ]
+      ],
+      [
+       "LowerLeg.L",
+       "Foot.L",
+       [
+        0.15,
+        -1,
+        -0.15
+       ]
+      ],
+      [
+       "UpperLeg.R",
+       "LowerLeg.R",
+       [
+        -0.5,
+        -0.3,
+        0.8
+       ]
+      ],
+      [
+       "LowerLeg.R",
+       "Foot.R",
+       [
+        -0.15,
+        -1,
+        -0.15
+       ]
+      ],
+      [
+       "UpperArm.R",
+       "LowerArm.R",
+       [
+        -0.3,
+        -0.75,
+        0.55
+       ]
+      ],
+      [
+       "LowerArm.R",
+       "Wrist.R",
+       [
+        -0.05,
+        -0.25,
+        1
+       ]
+      ],
+      [
+       "UpperArm.L",
+       "LowerArm.L",
+       [
+        0.3,
+        -0.75,
+        0.55
+       ]
+      ],
+      [
+       "LowerArm.L",
+       "Wrist.L",
+       [
+        0.05,
+        -0.25,
+        1
+       ]
+      ]
+     ],
+     "bone": "Torso",
+     "ratio": 0.78,
+     "off": [
+      0,
+      -0.02,
+      0
+     ],
+     "props": [
+      {
+       "kind": "helm_great",
+       "bone": "Head",
+       "off": [
+        0,
+        0.035,
+        0
+       ],
+       "scale": 0.064
+      },
+      {
+       "kind": "lance",
+       "bone": "Wrist.R",
+       "rot": [
+        -0.25,
+        0,
+        0
+       ],
+       "scale": 1.1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key": "knight_3",
+   "file": "../assets_src/animals/Horse.gltf",
+   "team": [],
+   "clips": {
+    "idle": "Idle",
+    "walk": "Walk",
+    "run": "Gallop",
+    "attack": {
+     "name": "Attack_Headbutt",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    },
+    "gather": "Eating"
+   },
+   "height": 1.05,
+   "tris0": 4200,
+   "tris1": 1300,
+   "props": [],
+   "riders": [
+    {
+     "file": "../assets_src/modularmen/Adventurer.gltf",
+     "team": [
+      "Green"
+     ],
+     "clip": "Idle",
+     "t": 0.2,
+     "aim": [
+      [
+       "UpperLeg.L",
+       "LowerLeg.L",
+       [
+        0.5,
+        -0.3,
+        0.8
+       ]
+      ],
+      [
+       "LowerLeg.L",
+       "Foot.L",
+       [
+        0.15,
+        -1,
+        -0.15
+       ]
+      ],
+      [
+       "UpperLeg.R",
+       "LowerLeg.R",
+       [
+        -0.5,
+        -0.3,
+        0.8
+       ]
+      ],
+      [
+       "LowerLeg.R",
+       "Foot.R",
+       [
+        -0.15,
+        -1,
+        -0.15
+       ]
+      ],
+      [
+       "UpperArm.R",
+       "LowerArm.R",
+       [
+        -0.3,
+        -0.75,
+        0.55
+       ]
+      ],
+      [
+       "LowerArm.R",
+       "Wrist.R",
+       [
+        -0.05,
+        -0.25,
+        1
+       ]
+      ],
+      [
+       "UpperArm.L",
+       "LowerArm.L",
+       [
+        0.3,
+        -0.75,
+        0.55
+       ]
+      ],
+      [
+       "LowerArm.L",
+       "Wrist.L",
+       [
+        0.05,
+        -0.25,
+        1
+       ]
+      ]
+     ],
+     "bone": "Torso",
+     "ratio": 0.78,
+     "off": [
+      0,
+      -0.02,
+      0
+     ],
+     "props": [
+      {
+       "kind": "helm_morion",
+       "bone": "Head",
+       "off": [
+        0,
+        0.035,
+        0
+       ],
+       "scale": 0.068
+      },
+      {
+       "kind": "sword",
+       "bone": "Wrist.R",
+       "rot": [
+        -0.9,
+        0,
+        0
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key": "knight_4",
+   "file": "../assets_src/animals/Horse_White.gltf",
+   "team": [],
+   "clips": {
+    "idle": "Idle",
+    "walk": "Walk",
+    "run": "Gallop",
+    "attack": {
+     "name": "Attack_Headbutt",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    },
+    "gather": "Eating"
+   },
+   "height": 1.05,
+   "tris0": 4200,
+   "tris1": 1300,
+   "props": [],
+   "riders": [
+    {
+     "file": "../assets_src/modularmen/Casual_2.gltf",
+     "team": [],
+     "clip": "Idle",
+     "t": 0.2,
+     "aim": [
+      [
+       "UpperLeg.L",
+       "LowerLeg.L",
+       [
+        0.5,
+        -0.3,
+        0.8
+       ]
+      ],
+      [
+       "LowerLeg.L",
+       "Foot.L",
+       [
+        0.15,
+        -1,
+        -0.15
+       ]
+      ],
+      [
+       "UpperLeg.R",
+       "LowerLeg.R",
+       [
+        -0.5,
+        -0.3,
+        0.8
+       ]
+      ],
+      [
+       "LowerLeg.R",
+       "Foot.R",
+       [
+        -0.15,
+        -1,
+        -0.15
+       ]
+      ],
+      [
+       "UpperArm.R",
+       "LowerArm.R",
+       [
+        -0.3,
+        -0.75,
+        0.55
+       ]
+      ],
+      [
+       "LowerArm.R",
+       "Wrist.R",
+       [
+        -0.05,
+        -0.25,
+        1
+       ]
+      ],
+      [
+       "UpperArm.L",
+       "LowerArm.L",
+       [
+        0.3,
+        -0.75,
+        0.55
+       ]
+      ],
+      [
+       "LowerArm.L",
+       "Wrist.L",
+       [
+        0.05,
+        -0.25,
+        1
+       ]
+      ]
+     ],
+     "bone": "Torso",
+     "ratio": 0.78,
+     "off": [
+      0,
+      -0.02,
+      0
+     ],
+     "props": [
+      {
+       "kind": "tricorn",
+       "bone": "Head",
+       "off": [
+        0,
+        0.035,
+        0
+       ],
+       "scale": 0.066
+      },
+      {
+       "kind": "musket",
+       "bone": "Wrist.R",
+       "rot": [
+        -0.2,
+        0,
+        0
+       ],
+       "scale": 0.8
+      }
+     ],
+     "recolor": {
+      "LightBrown": "#e8e2d0",
+      "LightBlue": "#3a3a44",
+      "White": "#f0f0f0"
+     }
+    }
+   ]
+  },
+  {
+   "key": "cataphract_0",
+   "file": "../assets_src/animals/Horse.gltf",
+   "team": [],
+   "clips": {
+    "idle": "Idle",
+    "walk": "Walk",
+    "run": "Gallop",
+    "attack": {
+     "name": "Attack_Headbutt",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    },
+    "gather": "Eating"
+   },
+   "height": 1.05,
+   "tris0": 4200,
+   "tris1": 1300,
+   "props": [],
+   "riders": [
+    {
+     "file": "../assets_src/modularmen/King.gltf",
+     "team": [
+      "Blue"
+     ],
+     "hideMats": [
+      "Gold"
+     ],
+     "clip": "Idle",
+     "t": 0.2,
+     "aim": [
+      [
+       "UpperLeg.L",
+       "LowerLeg.L",
+       [
+        0.5,
+        -0.3,
+        0.8
+       ]
+      ],
+      [
+       "LowerLeg.L",
+       "Foot.L",
+       [
+        0.15,
+        -1,
+        -0.15
+       ]
+      ],
+      [
+       "UpperLeg.R",
+       "LowerLeg.R",
+       [
+        -0.5,
+        -0.3,
+        0.8
+       ]
+      ],
+      [
+       "LowerLeg.R",
+       "Foot.R",
+       [
+        -0.15,
+        -1,
+        -0.15
+       ]
+      ],
+      [
+       "UpperArm.R",
+       "LowerArm.R",
+       [
+        -0.3,
+        -0.75,
+        0.55
+       ]
+      ],
+      [
+       "LowerArm.R",
+       "Wrist.R",
+       [
+        -0.05,
+        -0.25,
+        1
+       ]
+      ],
+      [
+       "UpperArm.L",
+       "LowerArm.L",
+       [
+        0.3,
+        -0.75,
+        0.55
+       ]
+      ],
+      [
+       "LowerArm.L",
+       "Wrist.L",
+       [
+        0.05,
+        -0.25,
+        1
+       ]
+      ]
+     ],
+     "bone": "Torso",
+     "ratio": 0.78,
+     "off": [
+      0,
+      -0.02,
+      0
+     ],
+     "props": [
+      {
+       "kind": "helm_nasal",
+       "bone": "Head",
+       "off": [
+        0,
+        0.035,
+        0
+       ],
+       "scale": 0.068
+      },
+      {
+       "kind": "lance",
+       "bone": "Wrist.R",
+       "rot": [
+        -0.25,
+        0,
+        0
+       ],
+       "scale": 1.1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key": "knight_8",
+   "file": "../assets_src/mech/George.gltf",
+   "team": [
+    "Main"
+   ],
+   "clips": {
+    "idle": "Idle",
+    "walk": "Walk",
+    "run": "Run",
+    "shoot": {
+     "name": "Shoot",
+     "loop": false
+    },
+    "attack": {
+     "name": "Punch",
+     "loop": false
+    },
+    "die": {
+     "name": "Death",
+     "loop": false
+    }
+   },
+   "height": 1.3,
+   "gun": true,
+   "fold": "(Pinky|Ring|Index|Thumb|Palm)",
+   "tris0": 3600,
+   "tris1": 1100,
+   "props": []
+  }
+ ]
+}

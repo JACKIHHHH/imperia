@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Imperia</title>
+<style>
+:root{
+ --panel:rgba(15,17,20,.8);--panel-2:rgba(24,27,31,.94);--line:rgba(255,255,255,.08);--line-2:rgba(255,255,255,.14);
+ --ink:#ece6da;--mut:#98928a;--dim:#6c675f;--acc:#d8b46a;--acc-2:#f0d493;--bad:#ea7a63;--good:#8fca7b;
+ --food:#e07b5f;--wood:#bf8f5c;--gold:#e8c45a;--stone:#aab2b9;
+ --ui:-apple-system,"SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif;--disp:"Baskerville","Libre Baskerville","Hoefler Text",Georgia,serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;overflow:hidden;background:#07080a;color:var(--ink);font:13px/1.4 var(--ui);-webkit-font-smoothing:antialiased;user-select:none;-webkit-user-select:none}
+button{font:inherit;color:inherit}
+#c3d,#ov{position:fixed;inset:0;width:100%;height:100%;display:block}
+#ov{pointer-events:none}
+#vig{position:fixed;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 45%,transparent 55%,rgba(0,0,0,.42) 100%)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.04);-webkit-backdrop-filter:blur(16px) saturate(1.15);backdrop-filter:blur(16px) saturate(1.15)}
+.top{position:fixed;top:12px;left:12px;right:12px;display:flex;justify-content:space-between;gap:12px;pointer-events:none;align-items:flex-start}
+.top>*{pointer-events:auto}
+.resbar{display:flex;align-items:center;gap:4px;padding:6px 10px}
+.res{display:flex;align-items:center;gap:7px;padding:3px 10px;min-width:78px;font-variant-numeric:tabular-nums;font-size:14px;font-weight:500;letter-spacing:.01em}
+.res svg{width:16px;height:16px;flex:none}
+.sep{width:1px;height:20px;background:var(--line-2);margin:0 4px}
+.chip{display:flex;align-items:center;gap:6px;border:1px solid var(--line);background:rgba(255,255,255,.03);border-radius:8px;padding:3px 9px;cursor:pointer;font-variant-numeric:tabular-nums}
+.chip:hover{border-color:var(--acc)}
+.chip.zero{opacity:.45}
+.chip svg{width:14px;height:14px}
+.meta{display:flex;align-items:center;gap:12px;padding:6px 8px 6px 16px}
+#age{font-family:var(--disp);font-size:15px;color:var(--acc-2);letter-spacing:.03em;white-space:nowrap}
+#aging{font-size:11px;color:var(--mut)}
+#clock{font-variant-numeric:tabular-nums;color:var(--mut);min-width:44px;text-align:right}
+#fps{font-variant-numeric:tabular-nums;color:var(--dim);font-size:11px;min-width:44px}
+.players{display:flex;gap:5px;align-items:center}
+.pl{width:10px;height:10px;border-radius:50%;box-shadow:0 0 0 2px rgba(0,0,0,.35)}
+.pl.out{opacity:.25}
+.pl.ally{box-shadow:0 0 0 2px rgba(143,208,255,.55)}
+.ib{border:1px solid var(--line);background:rgba(255,255,255,.03);border-radius:8px;padding:4px 10px;cursor:pointer;font-size:12px;color:var(--ink);min-width:34px}
+.ib:hover{border-color:var(--acc);color:var(--acc-2)}
+#msgs{position:fixed;top:66px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;pointer-events:none;z-index:5}
+.msg{background:var(--panel-2);border:1px solid var(--line);border-radius:999px;padding:6px 16px;font-size:13px;transition:opacity .5s,transform .5s;box-shadow:0 6px 18px rgba(0,0,0,.3)}
+.msg.warn{color:#ffd0c4;border-color:rgba(234,122,99,.45)}
+#tut{position:fixed;top:66px;left:12px;width:320px;padding:14px 16px;z-index:6}
+#tut .step{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc)}
+#tut .txt{margin:6px 0 10px;font-size:13.5px;line-height:1.45}
+#tut .bar{height:3px;border-radius:2px;background:rgba(255,255,255,.08);overflow:hidden;margin-bottom:10px}
+#tut .bar i{display:block;height:100%;background:var(--acc)}
+.bottom{position:fixed;left:12px;right:12px;bottom:12px;display:flex;gap:12px;align-items:flex-end;pointer-events:none}
+.bottom>*{pointer-events:auto}
+.minip{width:204px;height:204px;padding:6px;flex:none;border-radius:14px}
+#mini{width:190px;height:190px;display:block;cursor:crosshair}
+.info{flex:1;min-width:0;height:150px;padding:14px 16px;overflow:hidden;position:relative}
+.cmdp{padding:10px;flex:none}
+#cmds{display:grid;grid-template-columns:repeat(5,54px);grid-template-rows:repeat(3,54px);gap:6px}
+.cb{position:relative;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.015));border-radius:9px;cursor:pointer;padding:0;display:flex;align-items:center;justify-content:center;transition:border-color .12s,background .12s}
+.cb:hover{border-color:var(--acc);background:linear-gradient(180deg,rgba(216,180,106,.16),rgba(216,180,106,.04))}
+.cb:active{transform:translateY(1px)}
+.cb img{width:46px;height:46px;pointer-events:none;filter:drop-shadow(0 2px 3px rgba(0,0,0,.5))}
+.cb .k{position:absolute;right:4px;bottom:2px;font-size:9.5px;font-weight:600;color:var(--acc);opacity:.85;letter-spacing:.04em}
+.cb.off{opacity:.3}
+.cb.poor img{filter:grayscale(.85) brightness(.75)}
+.cb.poor .k{color:var(--bad)}
+.cb.on{border-color:var(--acc);box-shadow:inset 0 0 0 1px var(--acc)}
+.cb.hint{animation:hint 1.1s ease-in-out infinite}
+@keyframes hint{0%,100%{box-shadow:0 0 0 0 rgba(240,212,147,.0),inset 0 0 0 1px rgba(240,212,147,.5)}50%{box-shadow:0 0 0 5px rgba(240,212,147,.35),inset 0 0 0 1px var(--acc-2)}}
+.empty{color:var(--mut);display:flex;flex-direction:column;justify-content:center;height:100%;gap:6px}
+.empty b{font-family:var(--disp);font-weight:normal;color:var(--ink);font-size:17px}
+.ent{display:flex;gap:16px;height:100%}
+.portrait{width:96px;height:96px;flex:none;border-radius:10px;border:1px solid var(--line);background:radial-gradient(circle at 50% 35%,rgba(255,255,255,.07),rgba(0,0,0,.2));display:flex;align-items:center;justify-content:center}
+.portrait img{width:88px;height:88px}
+.edet{flex:0 1 270px;min-width:0}
+.ename{font-family:var(--disp);font-size:19px;line-height:1.1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.owner{font-family:var(--ui);font-size:11px;letter-spacing:.08em;text-transform:uppercase;margin-top:3px;display:flex;align-items:center;gap:6px}
+.owner i{width:8px;height:8px;border-radius:50%;display:inline-block}
+.hp{height:6px;border-radius:3px;background:rgba(255,255,255,.08);overflow:hidden;margin:9px 0 3px;max-width:220px}
+.hp i{display:block;height:100%;background:var(--good);border-radius:3px}
+.hp.mid i{background:#e5c15a}.hp.low i{background:var(--bad)}.hp.prog i{background:var(--acc)}.hp.faith i{background:#e9d38a}
+.hpt{font-size:11.5px;color:var(--mut);font-variant-numeric:tabular-nums}
+.stats{display:flex;gap:14px;margin-top:8px;font-size:12px;color:var(--mut);font-variant-numeric:tabular-nums;flex-wrap:wrap}
+.stats b{color:var(--ink);font-weight:500}
+.stats svg{width:13px;height:13px;vertical-align:-2px;margin-right:3px}
+.state{margin-top:6px;font-size:12.5px;color:var(--ink)}
+.queue{flex:1;min-width:0;border-left:1px solid var(--line);padding-left:16px;display:flex;flex-direction:column;gap:8px}
+.qlab{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+.qrow{display:flex;gap:6px;flex-wrap:wrap}
+.qi{width:48px;height:48px;border:1px solid var(--line);border-radius:8px;position:relative;cursor:pointer;background:rgba(0,0,0,.2);overflow:hidden}
+.qi:hover{border-color:var(--bad)}
+.qi img{width:44px;height:44px;margin:1px}
+.qi .pb{position:absolute;left:0;bottom:0;height:3px;background:var(--acc)}
+.qi.blk{border-color:rgba(234,122,99,.5)}
+.qnote{font-size:12px;color:var(--mut)}
+.done{display:flex;gap:4px;flex-wrap:wrap;margin-top:2px}
+.done img{width:22px;height:22px;opacity:.8}
+.grid{display:flex;flex-wrap:wrap;gap:5px;align-content:flex-start;height:100%;overflow:hidden}
+.gi{width:44px;height:48px;border:1px solid var(--line);border-radius:7px;position:relative;cursor:pointer;background:rgba(0,0,0,.18)}
+.gi:hover{border-color:var(--acc)}
+.gi img{width:40px;height:40px;margin:1px 1px 0}
+.gi .hb{position:absolute;left:4px;right:4px;bottom:3px;height:3px;border-radius:2px;background:rgba(255,255,255,.1)}
+.gi .hb i{display:block;height:100%;border-radius:2px;background:var(--good)}
+.gi .n{position:absolute;right:3px;top:1px;font-size:10px;color:var(--acc-2);font-weight:600}
+#tip{position:fixed;z-index:30;width:260px;background:var(--panel-2);border:1px solid var(--line-2);border-radius:10px;padding:10px 12px;pointer-events:none;box-shadow:0 12px 30px rgba(0,0,0,.45)}
+#tip .tn{font-family:var(--disp);font-size:16px;display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+#tip .tk{font-family:var(--ui);font-size:10.5px;color:var(--acc);border:1px solid rgba(216,180,106,.4);border-radius:4px;padding:0 5px;white-space:nowrap}
+#tip .td{color:var(--mut);margin-top:4px;font-size:12px}
+#tip .tr{color:var(--bad);margin-top:5px;font-size:12px}
+.cost{display:flex;gap:12px;margin-top:7px;font-variant-numeric:tabular-nums;font-size:12.5px}
+.cost span{display:flex;align-items:center;gap:5px}
+.cost svg{width:13px;height:13px}
+.cost .no{color:var(--bad)}
+.screen{position:fixed;inset:0;z-index:20;display:flex;align-items:center;padding:0 6vw;background:linear-gradient(90deg,rgba(6,7,9,.9) 0%,rgba(6,7,9,.6) 50%,rgba(6,7,9,.08) 100%);overflow:auto}
+.screen.center{justify-content:center;background:rgba(6,7,9,.62);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);z-index:25}
+.card{width:min(560px,100%);padding-block:28px 60px}
+.eyebrow{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--acc)}
+h1{font-family:var(--disp);font-weight:normal;font-size:clamp(52px,7vw,86px);letter-spacing:.14em;margin:.06em 0 .04em;line-height:1;color:#f4ecdc;text-shadow:0 4px 30px rgba(0,0,0,.5)}
+.lede{color:#c9c1b3;font-size:15px;max-width:40ch;margin:0 0 22px}
+.setup{display:grid;grid-template-columns:118px 1fr;gap:10px 14px;align-items:center}
+.lab{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.seg{display:inline-flex;flex-wrap:wrap;border:1px solid var(--line-2);border-radius:10px;padding:3px;gap:3px;background:rgba(0,0,0,.25)}
+.seg button{border:0;background:transparent;padding:7px 13px;border-radius:7px;cursor:pointer;color:var(--mut);font-size:13px}
+.seg button:hover{color:var(--ink)}
+.seg button.on{background:rgba(216,180,106,.18);color:var(--acc-2);box-shadow:inset 0 0 0 1px rgba(216,180,106,.45)}
+.seg button:disabled{opacity:.35;cursor:default}
+.hintline{grid-column:2;color:var(--mut);font-size:12px;margin-top:-4px;min-height:17px}
+.actions{display:flex;gap:10px;margin-top:24px;flex-wrap:wrap}
+.btn{border:1px solid var(--line-2);background:rgba(255,255,255,.04);padding:11px 18px;border-radius:10px;cursor:pointer;font-size:14px}
+.btn:hover{border-color:var(--acc);color:var(--acc-2)}
+.btn.pri{background:linear-gradient(180deg,#e2c07a,#b89448);border-color:#f0d493;color:#1a150c;font-weight:600;letter-spacing:.02em}
+.btn.pri:hover{filter:brightness(1.07);color:#1a150c}
+.btn.sm{padding:7px 12px;font-size:12.5px}
+.help{margin-top:22px;border-top:1px solid var(--line);padding-top:16px;display:grid;grid-template-columns:auto 1fr;gap:5px 16px;font-size:12.5px;color:#c4bcae}
+.help kbd{font:600 11px var(--ui);color:var(--acc);white-space:nowrap}
+.foot{position:fixed;left:6vw;bottom:20px;font-size:11px;color:var(--dim);letter-spacing:.06em}
+.box{background:var(--panel-2);border:1px solid var(--line-2);border-radius:16px;padding:28px 32px;width:min(560px,calc(100% - 32px));box-shadow:0 30px 80px rgba(0,0,0,.55);max-height:calc(100% - 40px);overflow:auto}
+.box h2{font-family:var(--disp);font-weight:normal;font-size:38px;margin:4px 0 6px;letter-spacing:.04em}
+.box h2.win{color:var(--acc-2)}.box h2.lose{color:#f0a08c}
+.st{width:100%;border-collapse:collapse;margin-top:16px;font-variant-numeric:tabular-nums}
+.st th{font-weight:500;color:var(--mut);font-size:11px;letter-spacing:.08em;text-transform:uppercase;text-align:right;padding:4px 0 4px 10px;white-space:nowrap}
+.st th:first-child,.st td:first-child{text-align:left;padding-left:0}
+.st td{padding:6px 0 6px 10px;border-top:1px solid var(--line);text-align:right}
+.slots{display:flex;flex-direction:column;gap:8px;margin-top:16px}
+.slot{display:flex;align-items:center;gap:14px;border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:rgba(255,255,255,.02)}
+.slot .sn{font-family:var(--disp);font-size:22px;color:var(--acc);width:22px}
+.slot .sd{flex:1;min-width:0}
+.slot .sd b{display:block;font-weight:500}
+.slot .sd span{color:var(--mut);font-size:12px}
+.opts{display:grid;grid-template-columns:150px 1fr;gap:14px 16px;align-items:center;margin-top:18px}
+.opts input[type=range]{width:100%;accent-color:#d8b46a}
+.tgl{width:42px;height:24px;border-radius:12px;border:1px solid var(--line-2);background:rgba(255,255,255,.06);position:relative;cursor:pointer;padding:0}
+.tgl::after{content:"";position:absolute;top:3px;left:3px;width:16px;height:16px;border-radius:50%;background:var(--mut);transition:left .15s,background .15s}
+.tgl.on{background:rgba(216,180,106,.25);border-color:rgba(216,180,106,.6)}
+.tgl.on::after{left:21px;background:var(--acc-2)}
+#loading{position:fixed;inset:0;z-index:40;background:#07080a;display:flex;align-items:center;justify-content:center;font-family:var(--disp);letter-spacing:.3em;color:var(--mut);transition:opacity .6s}
+#vict{position:fixed;top:66px;right:12px;display:flex;flex-direction:column;gap:6px;z-index:5;pointer-events:none}
+.vc{display:flex;gap:14px;align-items:center;justify-content:space-between;background:var(--panel-2);border:1px solid var(--line);border-radius:10px;padding:6px 12px;min-width:220px;font-size:12.5px}
+.vc b{font-variant-numeric:tabular-nums;font-family:var(--disp);font-size:16px;font-weight:normal}
+.vc.good{border-color:rgba(143,202,123,.45)}.vc.good b{color:var(--good)}.vc.bad{border-color:rgba(234,122,99,.45)}.vc.bad b{color:var(--bad)}
+#groups{position:fixed;left:228px;bottom:180px;display:flex;gap:6px;z-index:4}
+.grp{display:flex;align-items:center;gap:4px;padding:3px 8px 3px 6px;border:1px solid var(--line);border-radius:8px;background:var(--panel-2);cursor:pointer;font-variant-numeric:tabular-nums;font-size:12px}
+.grp:hover,.grp.on{border-color:var(--acc)}.grp b{color:var(--acc-2);font-size:12px}.grp img{width:24px;height:24px}
+#chat{position:fixed;left:50%;bottom:190px;transform:translateX(-50%);z-index:8;padding:8px}
+#chat input,.inp{background:rgba(0,0,0,.35);border:1px solid var(--line-2);border-radius:8px;color:var(--ink);padding:8px 10px;font:inherit;width:360px;outline:none}
+#chat input:focus,.inp:focus{border-color:var(--acc)}
+.msg.chatmsg{border-color:rgba(216,180,106,.45)}
+.lrow{display:grid;grid-template-columns:12px 1fr 140px 110px 90px;gap:10px;align-items:center;padding:8px 0;border-top:1px solid var(--line)}
+.lrow i{width:12px;height:12px;border-radius:50%}
+.lrow select,.box select{background:rgba(0,0,0,.35);border:1px solid var(--line-2);border-radius:7px;color:var(--ink);padding:5px 6px;font:inherit;font-size:12.5px}
+.lrow select:disabled{opacity:.55}
+.tag{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line-2);border-radius:4px;padding:0 4px;margin-left:4px}
+.tag.you{color:var(--acc);border-color:rgba(216,180,106,.45)}
+#lobChat{height:110px;overflow:auto;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:12.5px;margin-top:10px;background:rgba(0,0,0,.2)}
+.lcfgs{display:grid;grid-template-columns:90px 1fr;gap:8px 12px;align-items:center;margin-top:14px}
+.graph{width:100%;height:190px;display:block;margin-top:10px;border:1px solid var(--line);border-radius:10px;background:rgba(0,0,0,.18)}
+.tabs{display:flex;gap:4px;margin-top:16px}
+.kgrid{display:grid;grid-template-columns:repeat(5,40px);gap:5px}
+.kb{border:1px solid var(--line-2);background:rgba(255,255,255,.04);border-radius:7px;padding:6px 0;min-width:40px;cursor:pointer;font:600 12px var(--ui);color:var(--acc-2)}
+.kb:hover{border-color:var(--acc)}.kb.on{background:rgba(216,180,106,.25);border-color:var(--acc);animation:hint 1.1s infinite}
+.klist{display:grid;grid-template-columns:1fr 70px;gap:6px 10px;align-items:center;font-size:12.5px;color:#c4bcae}
+.box.wide{width:min(760px,calc(100% - 32px))}
+[hidden]{display:none!important}
+button:focus-visible,.btn:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+@media (max-width:1150px){#cmds{grid-template-columns:repeat(5,46px);grid-template-rows:repeat(3,46px)}.cb img{width:40px;height:40px}.minip{width:164px;height:164px}#mini{width:150px;height:150px}.info{height:140px}.res{min-width:64px}}
+@media (prefers-reduced-motion:reduce){.msg{transition:none}.cb.hint{animation:none;border-color:var(--acc-2)}}
+/* HUD por edad: marcos, acentos y tipografía cambian al avanzar */
+body[data-age="3"]{--acc:#e2b458;--acc-2:#f6dca0;--panel:rgba(22,16,14,.8);--line:rgba(226,180,88,.14)}
+body[data-age="4"]{--acc:#c98d52;--acc-2:#ecc49a;--panel:rgba(24,19,15,.82);--line:rgba(201,141,82,.16)}
+body[data-age="5"]{--acc:#b9b77c;--acc-2:#e2e0b0;--panel:rgba(20,22,16,.84);--line:rgba(185,183,124,.16);--disp:"Avenir Next Condensed","DIN Condensed","Arial Narrow",sans-serif}
+body[data-age="6"]{--acc:#ff9a4a;--acc-2:#ffd0a0;--panel:rgba(18,18,20,.82);--line:rgba(255,154,74,.18);--disp:"Futura","Avenir Next",sans-serif}
+body[data-age="7"]{--acc:#46d8ff;--acc-2:#b8f0ff;--panel:rgba(6,14,22,.76);--line:rgba(70,216,255,.22);--line-2:rgba(70,216,255,.34);--disp:"Avenir Next","SF Pro Display",sans-serif}
+body[data-age="8"]{--acc:#8affd0;--acc-2:#d8c8ff;--panel:rgba(10,14,22,.66);--line:rgba(138,255,208,.24);--line-2:rgba(216,200,255,.34);--disp:"Avenir Next","SF Pro Display",sans-serif}
+body[data-age="5"] .panel,body[data-age="6"] .panel{border-radius:4px}
+body[data-age="7"] .panel{border-radius:2px;box-shadow:0 0 0 1px var(--line),0 0 22px rgba(70,216,255,.12),0 10px 30px rgba(0,0,0,.4)}
+body[data-age="8"] .panel{border-radius:16px;box-shadow:0 0 0 1px var(--line),0 0 30px rgba(138,255,208,.14),0 10px 30px rgba(0,0,0,.35)}
+body[data-age="7"] .panel,body[data-age="8"] .panel{background-image:linear-gradient(180deg,rgba(255,255,255,.05),transparent 40%)}
+body{transition:none}.panel{transition:border-radius .6s,box-shadow .6s,background .6s}
+/* Menú principal: paneles de cristal esmerilado, bisel, brillo suave */
+#menu .title,#menu #mSetup{background:linear-gradient(160deg,rgba(34,30,24,.58),rgba(10,10,13,.38));-webkit-backdrop-filter:blur(16px) saturate(1.25);backdrop-filter:blur(16px) saturate(1.25);
+ border:1px solid rgba(240,212,147,.2);border-radius:6px 22px 6px 22px;box-shadow:0 30px 90px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.09),inset 0 0 0 1px rgba(0,0,0,.25);padding:34px 40px 30px}
+#menu .title{width:min(470px,100%);animation:mrise .7s cubic-bezier(.2,.8,.2,1) both}
+#menu #mSetup{animation:mrise .45s cubic-bezier(.2,.8,.2,1) both}
+.logo{background:linear-gradient(180deg,#fff5dc 10%,#e6c27c 55%,#9c7838);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none;filter:drop-shadow(0 0 22px rgba(216,180,106,.28)) drop-shadow(0 6px 18px rgba(0,0,0,.6));letter-spacing:.16em;font-size:clamp(46px,5.6vw,74px);white-space:nowrap}
+.logobar{height:2px;width:150px;margin:10px 0 16px;background:linear-gradient(90deg,var(--acc),rgba(240,212,147,.2) 70%,transparent);box-shadow:0 0 12px rgba(216,180,106,.5)}
+.mnav{display:grid;gap:8px;margin-top:20px}
+.mb{display:flex;justify-content:space-between;align-items:baseline;gap:14px;text-align:left;padding:12px 18px;border-radius:3px 12px 3px 12px;border:1px solid rgba(255,255,255,.09);background:linear-gradient(90deg,rgba(255,255,255,.055),rgba(255,255,255,.02));color:var(--ink);font-size:16.5px;letter-spacing:.03em;cursor:pointer;transition:transform .18s,background .18s,border-color .18s,box-shadow .18s}
+.mb small{color:var(--mut);font-size:11.5px;letter-spacing:.04em}
+.mb:hover,.mb.hv,.mb:focus-visible{background:linear-gradient(90deg,rgba(216,180,106,.2),rgba(216,180,106,.05));border-color:rgba(240,212,147,.55);box-shadow:0 0 24px rgba(216,180,106,.2),inset 0 0 0 1px rgba(240,212,147,.15);transform:translateX(5px);outline:none}
+.mb.pri{background:linear-gradient(180deg,#ecca84,#b89448);border-color:#f3dba2;color:#1a150c;font-weight:600;box-shadow:0 8px 26px rgba(184,148,72,.3)}
+.mb.pri small{color:#4a3a1c}.mb.pri:hover{filter:brightness(1.07);background:linear-gradient(180deg,#ecca84,#b89448)}
+.mb.quit{margin-top:8px;color:#efb7a6;border-color:rgba(234,122,99,.18)}.mb.quit:hover{background:linear-gradient(90deg,rgba(234,122,99,.18),rgba(234,122,99,.04));border-color:rgba(234,122,99,.5);box-shadow:0 0 22px rgba(234,122,99,.18)}
+.ver{position:fixed;right:24px;bottom:18px;font-size:10.5px;letter-spacing:.32em;color:rgba(236,230,218,.4);z-index:21;pointer-events:none}
+#mSetup #mpBtn,#mSetup #tutBtn,#mSetup #loadBtn,#mSetup #optBtn,#menu .foot{display:none}
+#menu.fade{animation:mfade .42s ease forwards;pointer-events:none}
+@keyframes mfade{to{opacity:0;filter:blur(8px)}}
+@keyframes mrise{from{opacity:0;transform:translateY(16px)}}
+#quick{position:fixed;left:12px;bottom:230px;display:flex;flex-direction:column;gap:7px;z-index:6;pointer-events:none}
+#quick .qb{pointer-events:auto;display:flex;align-items:center;gap:9px;width:204px;padding:8px 12px;border-radius:11px;cursor:pointer;color:var(--ink);font-size:13px;text-align:left}
+#quick .qb svg{width:20px;height:20px;flex:none}#quick .qb span{flex:1}#quick .qb b{font-variant-numeric:tabular-nums;font-size:15px;min-width:22px;text-align:right}
+#quick .qb:hover{border-color:var(--acc)}#idleBig.zero{opacity:.5}#idleBig.hot{border-color:#f0c35a;box-shadow:0 0 0 1px rgba(240,195,90,.5),0 0 18px rgba(240,195,90,.35);animation:qpulse 1.6s ease-in-out infinite}
+@keyframes qpulse{50%{box-shadow:0 0 0 1px rgba(240,195,90,.8),0 0 26px rgba(240,195,90,.6)}}
+#autoFarm i{font-style:normal;font-size:11px;padding:2px 7px;border-radius:6px;background:rgba(255,255,255,.08);color:var(--mut)}#autoFarm.on i{background:rgba(120,200,110,.25);color:#b8f0a8}
+@media (max-width:1150px){#quick{bottom:190px}#quick .qb{width:164px}}
+</style>
+</head>
+<body>
+<canvas id="c3d"></canvas>
+<canvas id="ov"></canvas>
+<div id="vig"></div>
+
+<div id="hud" hidden>
+ <header class="top">
+  <div class="panel resbar">
+   <div class="res" title="Comida"><svg viewBox="0 0 16 16"><path fill="var(--food)" d="M8 1.5c1.9 2 1.9 4.4 0 6.3-1.9-1.9-1.9-4.3 0-6.3Zm-4.9 3c2.6.2 4.2 2 4.4 4.7-2.7-.2-4.2-1.9-4.4-4.7Zm9.8 0c-.2 2.8-1.7 4.5-4.4 4.7.2-2.7 1.8-4.5 4.4-4.7ZM7.4 9.4h1.2V15H7.4z"/></svg><b id="r-food">0</b></div>
+   <div class="res" title="Madera"><svg viewBox="0 0 16 16"><rect x="1.5" y="5" width="13" height="6.5" rx="3.2" fill="var(--wood)"/><circle cx="4.7" cy="8.25" r="2.3" fill="#e7cfa6"/><circle cx="4.7" cy="8.25" r="1" fill="none" stroke="var(--wood)" stroke-width=".8"/></svg><b id="r-wood">0</b></div>
+   <div class="res" title="Oro"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.3" fill="var(--gold)"/><circle cx="8" cy="8" r="4.1" fill="none" stroke="#a8811f" stroke-width="1.1"/></svg><b id="r-gold">0</b></div>
+   <div class="res" title="Piedra"><svg viewBox="0 0 16 16"><path fill="var(--stone)" d="M3 12.8 1.6 8.4 5 3.6l5.3-.9 4 4.1-.7 5.4-4.6 1.6Z"/><path fill="#7e868d" d="m5 3.6 1.6 4.3 7.7-1.1L10.3 2.7Z" opacity=".5"/></svg><b id="r-stone">0</b></div>
+   <div class="sep"></div>
+   <div class="res" title="Población"><svg viewBox="0 0 16 16"><circle cx="8" cy="4.6" r="2.6" fill="var(--ink)"/><path fill="var(--ink)" d="M3 14c.3-3.3 2.2-5.3 5-5.3s4.7 2 5 5.3Z"/></svg><b id="r-pop">0/0</b></div>
+   <button class="chip zero" id="armyBtn" title="Seleccionar todo el ejército (M) · Mayús: centrar"><svg viewBox="0 0 16 16"><path fill="var(--acc)" d="M3 13 11.5 4.5l-1-1L13 1l2 2-2.5 2.5-1-1L3 13.9Zm10 0L4.5 4.5l1-1L3 1 1 3l2.5 2.5 1-1L13 13.9Z"/></svg><b id="armyc">0</b></button>
+   <button class="chip zero" id="idle" title="Seleccionar aldeano inactivo  ( . )"><svg viewBox="0 0 16 16"><circle cx="8" cy="4.6" r="2.6" fill="var(--acc)"/><path fill="var(--acc)" d="M3 14c.3-3.3 2.2-5.3 5-5.3s4.7 2 5 5.3Z"/></svg><b id="idlec">0</b></button>
+  </div>
+  <div class="panel meta">
+   <div><div id="age">Edad Oscura</div><div id="aging" hidden></div></div>
+   <div class="players" id="plist"></div>
+   <span id="fps" hidden></span>
+   <span id="clock">00:00</span>
+   <button class="ib" id="spd" title="Velocidad de juego">1×</button>
+   <button class="ib" id="menuBtn" title="Menú (Esc)">Menú</button>
+  </div>
+ </header>
+ <div id="msgs"></div>
+ <div id="vict" hidden></div>
+ <div id="groups" hidden></div>
+ <div id="chat" class="panel" hidden><input id="chatIn" maxlength="160" placeholder="Mensaje para todos · Intro para enviar"></div>
+ <div id="tut" class="panel" hidden>
+  <div class="step" id="tutStep">Tutorial · paso 1 de 11</div>
+  <div class="bar"><i id="tutBar" style="width:0"></i></div>
+  <div class="txt" id="tutTxt"></div>
+  <button class="btn sm" id="tutSkip">Saltar tutorial</button>
+ </div>
+  <div id="quick">
+   <button class="panel qb zero" id="idleBig" title="Ir al siguiente aldeano sin trabajo  ( . )"><svg viewBox="0 0 16 16"><circle cx="8" cy="4.6" r="2.6" fill="#f0c35a"/><path fill="#f0c35a" d="M3 14c.3-3.3 2.2-5.3 5-5.3s4.7 2 5 5.3Z"/><path d="M12.2 1.6v3.2M12.2 6.3v.1" stroke="#f0c35a" stroke-width="1.4" stroke-linecap="round"/></svg><span>Aldeanos ociosos</span><b id="idleBigc">0</b></button>
+   <button class="panel qb on" id="autoFarm" title="Cuando una granja se agota, el granjero la vuelve a plantar sola (cuesta la madera de siempre)"><svg viewBox="0 0 16 16"><path fill="#e2c15a" d="M7.4 15V6h1.2v9Z"/><path fill="#e2c15a" d="M8 1.2c1.2 1 1.2 2.6 0 3.6-1.2-1-1.2-2.6 0-3.6Zm-3.2 3c1.6 0 2.6 1.2 2.7 2.8-1.6 0-2.6-1.2-2.7-2.8Zm6.4 0c-.1 1.6-1.1 2.8-2.7 2.8.1-1.6 1.1-2.8 2.7-2.8ZM4.8 7.6c1.6 0 2.6 1.2 2.7 2.8-1.6 0-2.6-1.2-2.7-2.8Zm6.4 0c-.1 1.6-1.1 2.8-2.7 2.8.1-1.6 1.1-2.8 2.7-2.8Z"/></svg><span>Resembrar granjas</span><i id="autoFarmSt">Sí</i></button>
+  </div>
+ <footer class="bottom">
+  <div class="panel minip"><canvas id="mini" width="380" height="380"></canvas></div>
+  <div class="panel info" id="info"></div>
+  <div class="panel cmdp"><div id="cmds"></div></div>
+ </footer>
+</div>
+<div id="tip" hidden></div>
+
+<div id="menu" class="screen" hidden>
+ <div class="title" id="mTitle">
+  <div class="eyebrow">Estrategia en tiempo real · 9 edades</div>
+  <h1 class="logo">IMPERIA</h1><div class="logobar"></div>
+  <p class="lede">Del siglo V al año 2100: levanta tu aldea, avanza por nueve edades y conquista los reinos rivales.</p>
+  <nav class="mnav">
+   <button class="mb pri" data-go="play"><span>Jugar</span><small>Partida contra la IA</small></button>
+   <button class="mb" data-go="mp"><span>Multijugador</span><small>Red local</small></button>
+   <button class="mb" data-go="tut"><span>Tutorial</span><small>Aprende lo básico</small></button>
+   <button class="mb" data-go="load"><span>Cargar partida</span><small>Ranuras guardadas</small></button>
+   <button class="mb" data-go="opt"><span>Opciones</span><small>Sonido, gráficos, voz</small></button>
+   <button class="mb" data-go="how"><span>Controles</span><small>Teclado y ratón</small></button>
+   <button class="mb quit" data-go="quit" id="mQuit"><span>Salir</span><small>Cerrar Imperia</small></button>
+  </nav>
+ </div>
+ <div class="ver">IMPERIA 6.2</div>
+ <div class="card" id="mSetup" hidden>
+  <div class="eyebrow">Estrategia en tiempo real</div>
+  <h1>IMPERIA</h1>
+  <p class="lede">Elige tu civilización, el mapa y a tus rivales. Nueve edades te esperan: de la madera y la paja al grafeno y los hologramas.</p>
+  <div class="setup">
+   <div class="lab">Civilización</div><div class="seg" id="s-civ"></div>
+   <div class="hintline" id="civDesc"></div>
+   <div class="lab">Mapa</div><div class="seg" id="s-map"></div>
+   <div class="hintline" id="mapDesc"></div>
+   <div class="lab">Tamaño</div><div class="seg" id="s-size"></div>
+   <div class="lab">Rivales</div><div class="seg" id="s-nai"><button data-v="1">1</button><button data-v="2">2</button><button data-v="3">3</button></div>
+   <div class="lab">Modo</div><div class="seg" id="s-teams"><button data-v="ffa">Todos contra todos</button><button data-v="teams">Por equipos</button></div>
+   <div class="hintline" id="teamDesc"></div>
+   <div class="lab">Dificultad</div><div class="seg" id="s-diff"></div>
+   <div class="lab">Victoria</div><div class="seg" id="s-win"><button data-v="standard">Estándar</button><button data-v="conquest">Conquista</button></div>
+   <div class="hintline" id="winDesc"></div>
+   <div class="lab">Visibilidad</div><div class="seg" id="s-reveal"><button data-v="normal">Normal</button><button data-v="explored">Explorado</button><button data-v="all">Todo visible</button></div>
+   <div class="hintline" id="revealDesc"></div>
+  </div>
+  <div class="actions">
+   <button class="btn pri" id="start">Comenzar partida</button>
+   <button class="btn" id="mBack">← Volver</button>
+   <button class="btn" id="mpBtn">Multijugador</button>
+   <button class="btn" id="tutBtn">Tutorial</button>
+   <button class="btn" id="loadBtn">Cargar partida</button>
+   <button class="btn" id="optBtn">Opciones</button>
+   <button class="btn" id="howBtn">Controles</button>
+  </div>
+  <div class="help" id="how" hidden>
+   <kbd>Clic</kbd><span>Seleccionar. Arrastra para seleccionar varias unidades; doble clic selecciona todas las del mismo tipo.</span>
+   <kbd>Clic derecho</kbd><span>Mover, recolectar, construir, atacar, curar o convertir (también Ctrl + clic).</span>
+   <kbd>Dos dedos</kbd><span>Desplazar la cámara. Pellizca o usa la rueda para acercar.</span>
+   <kbd>Flechas</kbd><span>Mover la cámara. + y − para el zoom.</span>
+   <kbd>Q W E R T…</kbd><span>Atajos del panel de órdenes. Z cambia entre edificios económicos y militares.</span>
+   <kbd>Arrastrar</kbd><span>Con Empalizada o Muralla elegidas, arrastra para trazar el muro.</span>
+   <kbd>.</kbd><span>Siguiente aldeano inactivo. <kbd>H</kbd> centro urbano.</span>
+   <kbd>⌘ 1–9</kbd><span>Crear grupo; 1–9 para seleccionarlo.</span>
+   <kbd>Mayús</kbd><span>Añade a la selección, encadena órdenes y edificios, y entrena ×5.</span>
+   <kbd>M</kbd><span>Todo el ejército. Las teclas se pueden cambiar en Opciones.</span>
+   <kbd>Intro</kbd><span>Chat en las partidas en red.</span>
+   <kbd>F5</kbd><span>Guardado rápido en la ranura 1.</span>
+   <kbd>Esc</kbd><span>Cancelar o abrir el menú.</span>
+  </div>
+ </div>
+ <div class="foot">Conquista, maravilla o reliquias · 9 edades · Multijugador en red local</div>
+</div>
+
+<div id="pause" class="screen center" hidden>
+ <div class="box">
+  <div class="eyebrow" id="pauseEye">Partida en pausa</div>
+  <h2>Imperia</h2>
+  <div class="actions"><button class="btn pri" id="resume">Continuar</button><button class="btn" id="mpPause" hidden>Pausar para todos</button><button class="btn" id="saveBtn">Guardar partida</button><button class="btn" id="optBtn2">Opciones</button><button class="btn" id="restart">Reiniciar</button><button class="btn" id="resign" hidden>Rendirse</button><button class="btn" id="toMenu">Menú principal</button></div>
+ </div>
+</div>
+
+<div id="slots" class="screen center" hidden>
+ <div class="box">
+  <div class="eyebrow" id="slotsEye">Cargar partida</div>
+  <h2 id="slotsTitle">Partidas guardadas</h2>
+  <div class="slots" id="slotList"></div>
+  <div class="actions"><button class="btn" id="slotsBack">Volver</button></div>
+ </div>
+</div>
+
+<div id="opts" class="screen center" hidden>
+ <div class="box">
+  <div class="eyebrow">Ajustes</div>
+  <h2>Opciones</h2>
+  <div class="opts">
+   <div class="lab">Calidad gráfica</div><div class="seg" id="o-quality"><button data-v="high">Alta</button><button data-v="medium">Media</button><button data-v="low">Baja</button></div>
+   <div class="lab">Música</div><input type="range" id="o-music" min="0" max="100">
+   <div class="lab">Efectos</div><input type="range" id="o-sfx" min="0" max="100">
+   <div class="lab">Velocidad de cámara</div><input type="range" id="o-cam" min="40" max="220">
+   <div class="lab">Mover al tocar el borde</div><button class="tgl" id="o-edge" aria-label="Mover al tocar el borde"></button>
+   <div class="lab">Límite de fotogramas</div><div><div class="seg" id="o-cap"><button data-v="30">30 · ahorro</button><button data-v="60">60</button><button data-v="0">Sin límite</button></div><div class="hintline" style="margin-top:6px">Con 30 el portátil se calienta mucho menos y la batería dura más.</div></div>
+   <div class="lab">Mostrar FPS</div><button class="tgl" id="o-fps" aria-label="Mostrar FPS"></button>
+   <div class="lab">Voces</div><button class="tgl" id="o-voices" aria-label="Voces"></button>
+   <div class="lab">Panel de órdenes</div><div><div class="kgrid" id="keyGrid"></div><div class="hintline" style="margin-top:6px">Haz clic en una casilla y pulsa la tecla nueva. Esc cancela.</div></div>
+   <div class="lab">Atajos</div><div class="klist" id="keyList"></div>
+   <div></div><div><button class="btn sm" id="keyReset">Restablecer teclas</button></div>
+  </div>
+  <div class="actions"><button class="btn pri" id="optsBack">Hecho</button></div>
+ </div>
+</div>
+
+<div id="end" class="screen center" hidden>
+ <div class="box wide">
+  <div class="eyebrow" id="endEye">Fin de la partida</div>
+  <h2 id="endTitle">Victoria</h2>
+  <div id="endText" style="color:var(--mut)"></div>
+  <div class="tabs seg" id="graphTabs"><button data-k="score" class="on">Puntuación</button><button data-k="army">Ejército</button><button data-k="pop">Población</button><button data-k="res">Recursos</button></div>
+  <canvas class="graph" id="endGraph"></canvas>
+  <div style="overflow-x:auto"><table class="st" id="endStats"></table></div>
+  <div class="actions"><button class="btn pri" id="again">Jugar otra vez</button><button class="btn" id="endMenu">Menú principal</button></div>
+ </div>
+</div>
+
+<div id="mp" class="screen center" hidden>
+ <div class="box">
+  <div class="eyebrow">Multijugador en red local</div>
+  <h2>Partida en red</h2>
+  <div id="mpStatus" style="color:var(--mut);min-height:18px"></div>
+  <div class="opts" style="grid-template-columns:120px 1fr">
+   <div class="lab">Tu nombre</div><input class="inp" id="mpName" maxlength="18">
+   <div class="lab">Dirección IP</div><div style="display:flex;gap:8px"><input class="inp" id="mpAddr" placeholder="192.168.1.20" style="width:200px"><button class="btn sm" id="mpJoin">Unirse</button></div>
+  </div>
+  <div class="lab" style="margin-top:18px">Partidas encontradas</div>
+  <div class="slots" id="mpFound"></div>
+  <div class="actions"><button class="btn pri" id="mpHost">Crear partida</button><button class="btn" id="mpBack">Volver</button></div>
+ </div>
+</div>
+
+<div id="lobby" class="screen center" hidden>
+ <div class="box wide">
+  <div class="eyebrow" id="lobEye">Sala</div>
+  <h2>Sala de la partida</h2>
+  <div id="lobSlots"></div>
+  <div class="lcfgs" id="lobCfg"></div>
+  <div id="lobChat"></div>
+  <input class="inp" id="lobChatIn" maxlength="160" placeholder="Escribe un mensaje y pulsa Intro" style="width:100%;margin-top:8px">
+  <div class="actions"><button class="btn pri" id="lobStart">Empezar partida</button><button class="btn" id="lobLeave">Salir de la sala</button></div>
+ </div>
+</div>
+
+<div id="loading">IMPERIA</div>
+
+<script src="three.min.js"></script>
+<script src="maps_data.js"></script>
+<script src="game.js"></script>
+<script src="art.js"></script>
+<script src="art_eras.js"></script>
+<script src="art_units.js"></script>
+<script src="chars_data.js"></script>
+<script src="chars.js"></script>
+<script src="nature_data.js"></script>
+<script src="nature.js"></script>
+<script src="terrain_data.js"></script>
+<script src="render3d.js"></script>
+<script src="audio.js"></script>
+<script src="net.js"></script>
+<script src="voces/index.js"></script>
+<script src="ui.js"></script>
+</body>
+</html>

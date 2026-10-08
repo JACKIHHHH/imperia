@@ -1,0 +1,203 @@
+{
+ "nota": "Frases del juego para generar con ElevenLabs (tools/voces.mjs). Cambia los textos o las voces a tu gusto.",
+ "voces": {
+  "narrador": "pNInz6obpgDQGcFmaJgB",
+  "aldeano": "ErXwobaYiN019PkySvjV",
+  "obrero": "ErXwobaYiN019PkySvjV",
+  "soldado": "VR6AewLTigWG4xSOukaG",
+  "moderno": "VR6AewLTigWG4xSOukaG",
+  "monje": "TxGEqnHWrfWFTfGW9XjX",
+  "marinero": "yoZ06aMxZJJ28mfd3POQ",
+  "futuro": "EXAVITQu4vr4xnSDxMaL"
+ },
+ "frases": [
+  {
+   "voz": "narrador",
+   "texto": "Que comience la batalla"
+  },
+  {
+   "voz": "narrador",
+   "texto": "Voces activadas"
+  },
+  {
+   "voz": "narrador",
+   "texto": "Investigación completada"
+  },
+  {
+   "voz": "narrador",
+   "texto": "¡Nos han convertido una unidad!"
+  },
+  {
+   "voz": "narrador",
+   "texto": "¡Victoria!"
+  },
+  {
+   "voz": "narrador",
+   "texto": "Hemos sido derrotados"
+  },
+  {
+   "voz": "narrador",
+   "texto": "Nueva era"
+  },
+  {
+   "voz": "narrador",
+   "texto": "¡Nos atacan!"
+  },
+  {
+   "voz": "narrador",
+   "texto": "¡Alerta, enemigos!"
+  },
+  {
+   "voz": "narrador",
+   "texto": "¡A las armas!"
+  },
+  {
+   "voz": "narrador",
+   "texto": "Bienvenidos a la Edad Oscura"
+  },
+  {
+   "voz": "narrador",
+   "texto": "Bienvenidos a la Edad Feudal"
+  },
+  {
+   "voz": "narrador",
+   "texto": "Bienvenidos a la Edad de los Castillos"
+  },
+  {
+   "voz": "narrador",
+   "texto": "Bienvenidos a la Edad Imperial"
+  },
+  {
+   "voz": "narrador",
+   "texto": "Bienvenidos a la Edad Industrial"
+  },
+  {
+   "voz": "narrador",
+   "texto": "Bienvenidos a la Edad Mundial"
+  },
+  {
+   "voz": "narrador",
+   "texto": "Bienvenidos a la Edad Atómica"
+  },
+  {
+   "voz": "narrador",
+   "texto": "Bienvenidos a la Edad de la Información"
+  },
+  {
+   "voz": "narrador",
+   "texto": "Bienvenidos a la Edad del Futuro"
+  },
+  {
+   "voz": "aldeano",
+   "texto": "Voy"
+  },
+  {
+   "voz": "aldeano",
+   "texto": "Enseguida"
+  },
+  {
+   "voz": "aldeano",
+   "texto": "Sí, señor"
+  },
+  {
+   "voz": "aldeano",
+   "texto": "A trabajar"
+  },
+  {
+   "voz": "soldado",
+   "texto": "¡A la orden!"
+  },
+  {
+   "voz": "soldado",
+   "texto": "¡Entendido!"
+  },
+  {
+   "voz": "soldado",
+   "texto": "¡En marcha!"
+  },
+  {
+   "voz": "soldado",
+   "texto": "Sí, mi señor"
+  },
+  {
+   "voz": "soldado",
+   "texto": "¡Al ataque!"
+  },
+  {
+   "voz": "soldado",
+   "texto": "¡Por el reino!"
+  },
+  {
+   "voz": "soldado",
+   "texto": "¡A ellos!"
+  },
+  {
+   "voz": "monje",
+   "texto": "Que así sea"
+  },
+  {
+   "voz": "monje",
+   "texto": "Voy, hermano"
+  },
+  {
+   "voz": "marinero",
+   "texto": "¡Leven anclas!"
+  },
+  {
+   "voz": "marinero",
+   "texto": "Rumbo fijado"
+  },
+  {
+   "voz": "marinero",
+   "texto": "¡Avante!"
+  },
+  {
+   "voz": "obrero",
+   "texto": "Ahora mismo"
+  },
+  {
+   "voz": "obrero",
+   "texto": "Manos a la obra"
+  },
+  {
+   "voz": "obrero",
+   "texto": "Recibido, jefe"
+  },
+  {
+   "voz": "moderno",
+   "texto": "¡Recibido!"
+  },
+  {
+   "voz": "moderno",
+   "texto": "Afirmativo"
+  },
+  {
+   "voz": "moderno",
+   "texto": "En movimiento"
+  },
+  {
+   "voz": "moderno",
+   "texto": "¡Fuego a discreción!"
+  },
+  {
+   "voz": "moderno",
+   "texto": "¡Enemigo a la vista!"
+  },
+  {
+   "voz": "moderno",
+   "texto": "Objetivo fijado"
+  },
+  {
+   "voz": "futuro",
+   "texto": "Confirmado"
+  },
+  {
+   "voz": "futuro",
+   "texto": "Orden procesada"
+  },
+  {
+   "voz": "futuro",
+   "texto": "Objetivo marcado, iniciando ataque"
+  }
+ ]
+}

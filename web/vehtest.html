@@ -1,0 +1,16 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Prueba de vehículos</title></head><body style="margin:0;background:#666">
+<script src="three.min.js"></script><script src="art.js"></script><script src="art_eras.js"></script><script src="art_units.js"></script>
+<script>
+// Página de desarrollo: galería de vehículos por edad. Parámetros: ages=5,6 types=scout,knight
+const TH=THREE,Q=new URLSearchParams(location.search),W=+(Q.get('w')||1500),Hh=+(Q.get('h')||950);
+const ART=ImperiaArt;ART.init({fogify:m=>m});ART.initVeg();ART.initEras&&ART.initEras();
+const r=new TH.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});r.setSize(W,Hh);r.shadowMap.enabled=true;r.shadowMap.type=TH.PCFSoftShadowMap;r.outputColorSpace=TH.SRGBColorSpace;r.toneMapping=TH.ACESFilmicToneMapping;document.body.appendChild(r.domElement);
+const sc=new TH.Scene();sc.background=new TH.Color(0x8fa6b8);sc.add(new TH.HemisphereLight(0xdfe8ff,0x55603a,1.3));const d=new TH.DirectionalLight(0xfff2dd,2.6);d.position.set(-6,10,7);d.castShadow=true;d.shadow.mapSize.set(2048,2048);Object.assign(d.shadow.camera,{left:-10,right:10,top:10,bottom:-10});sc.add(d);
+const gr=new TH.Mesh(new TH.PlaneGeometry(60,60).rotateX(-Math.PI/2),new TH.MeshStandardMaterial({color:0x6f8a4a,roughness:1}));gr.receiveShadow=true;sc.add(gr);
+const ages=(Q.get('ages')||'3,4,5,6,7,8').split(',').map(Number),types=(Q.get('types')||'scout,knight,ram,mangonel,trade,galley,transport,fishship').split(',');
+const labels=[];ages.forEach((a,row)=>types.forEach((t,col)=>{const g=ART.unitEra(t,col%4,a);if(!g)return;g.position.set((col-(types.length-1)/2)*2.1,0,row*1.9);g.rotation.y=-.6;sc.add(g);labels.push([t+' '+a,g.position.clone()])}));
+const cam=new TH.PerspectiveCamera(30,W/Hh,.1,200);const cz=(ages.length-1)*1.9/2;const dist=+(Q.get('dist')||Math.max(types.length*2.1*1.1,ages.length*1.9*1.6));cam.position.set(0,dist*.6,cz+dist*.9);cam.lookAt(0,.3,cz);
+r.render(sc,cam);const cv=document.createElement('canvas');cv.width=W;cv.height=Hh;const g2=cv.getContext('2d');g2.drawImage(r.domElement,0,0);g2.font='bold 13px Helvetica';g2.textAlign='center';
+for(const [t,p] of labels){const v=p.clone().add(new TH.Vector3(0,-.1,.55)).project(cam);const x=(v.x+1)/2*W,y=(1-v.y)/2*Hh;g2.fillStyle='#000a';g2.fillRect(x-50,y-12,100,16);g2.fillStyle='#fff';g2.fillText(t,x,y)}
+window.__url=cv.toDataURL('image/png');try{window.webkit.messageHandlers.store.postMessage({id:9,op:'write',key:'shot_'+(Q.get('name')||'veh'),data:window.__url})}catch(e){}window.__done=1;
+</script></body></html>
